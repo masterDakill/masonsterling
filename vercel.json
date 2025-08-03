@@ -1,0 +1,32 @@
+{
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/mason683847"
+    },
+    {
+      "source": "/soundcloud", 
+      "destination": "https://on.soundcloud.com/6KsGuPyfdgfRbJPfhJ"
+    },
+    {
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/@MasonSterling-r3p"
+    },
+    {
+      "source": "/suno",
+      "destination": "https://suno.com/@masonsterling"
+    }
+  ]
+}
