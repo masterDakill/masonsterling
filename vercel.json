@@ -12,13 +12,17 @@
     }
   ],
   "redirects": [
+     {
+      "source": "/LinkTree",
+      "destination": "https://linktr.ee/masonsterling"
+    },
     {
       "source": "/instagram",
       "destination": "https://www.instagram.com/mason683847"
     },
     {
       "source": "/soundcloud", 
-      "destination": "https://on.soundcloud.com/6KsGuPyfdgfRbJPfhJ"
+      "destination": "https://soundcloud.com/masonsterling"
     },
     {
       "source": "/youtube",
