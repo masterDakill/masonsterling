@@ -4,8 +4,23 @@
   font-weight: 400;
 
   color-scheme: dark;
+<<<<<<< HEAD
   color: rgba(255, 255, 255, 0.87);
   background-color: #0a0a0a;
+=======
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #0B1426;
+
+  /* Brand Colors - Navy Blue & Orange Neon */
+  --primary-navy: #0B1426;
+  --secondary-navy: #1a2847;
+  --accent-orange: #FF6B35;
+  --neon-orange: #FF8C42;
+  --bright-orange: #FFB347;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8C5D6;
+  --text-accent: #FF6B35;
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,8 +36,13 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+<<<<<<< HEAD
   background: #0a0a0a;
   color: rgba(255, 255, 255, 0.87);
+=======
+  background: var(--primary-navy);
+  color: var(--text-primary);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   overflow-x: hidden;
 }
 
@@ -36,6 +56,7 @@ html {
 }
 
 a {
+<<<<<<< HEAD
   color: #D4A574;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -43,6 +64,16 @@ a {
 
 a:hover {
   color: #F4E4BC;
+=======
+  color: var(--accent-orange);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-orange);
+  text-shadow: 0 0 8px var(--neon-orange);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 button {
@@ -73,16 +104,29 @@ input, textarea, select {
 }
 
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
   background: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #D4A574, #F4E4BC);
+=======
+  background: var(--primary-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
   background: linear-gradient(135deg, #F4E4BC, #D4A574);
+=======
+  background: linear-gradient(135deg, var(--neon-orange), var(--bright-orange));
+  box-shadow: 0 0 8px var(--neon-orange);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .container {

@@ -1,7 +1,12 @@
 .App {
   min-height: 100vh;
+<<<<<<< HEAD
   background: #0a0a0a;
   color: rgba(255, 255, 255, 0.87);
+=======
+  background: var(--primary-navy);
+  color: var(--text-primary);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 main {

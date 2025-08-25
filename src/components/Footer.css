@@ -1,10 +1,18 @@
 .footer {
   background: linear-gradient(180deg, 
+<<<<<<< HEAD
     #533483 0%, 
     #2C1810 50%, 
     #0a0a0a 100%
   );
   border-top: 1px solid rgba(212, 165, 116, 0.3);
+=======
+    #3d5a8e 0%, 
+    var(--secondary-navy) 50%, 
+    var(--primary-navy) 100%
+  );
+  border-top: 1px solid rgba(255, 107, 53, 0.3);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   padding: 4rem 0 2rem;
   position: relative;
 }
@@ -17,8 +25,13 @@
   right: 0;
   bottom: 0;
   background-image: 
+<<<<<<< HEAD
     radial-gradient(circle at 30% 30%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 70% 70%, rgba(244, 228, 188, 0.05) 0%, transparent 50%);
+=======
+    radial-gradient(circle at 30% 30%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255, 140, 66, 0.05) 0%, transparent 50%);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   pointer-events: none;
 }
 
@@ -44,16 +57,29 @@
 .logo-circle-small {
   width: 80px;
   height: 80px;
+<<<<<<< HEAD
   border-radius: 50%;
   background: linear-gradient(135deg, #D4A574, #F4E4BC, #D4A574);
+=======
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange), var(--bright-orange));
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   box-shadow: 
+<<<<<<< HEAD
     0 0 20px rgba(212, 165, 116, 0.3),
     inset 0 2px 8px rgba(255, 255, 255, 0.2),
     inset 0 -2px 8px rgba(0, 0, 0, 0.3);
+=======
+    0 0 20px rgba(255, 107, 53, 0.4),
+    0 0 40px rgba(255, 107, 53, 0.2),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 140, 66, 0.6);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .logo-circle-small::before {
@@ -63,9 +89,15 @@
   left: 6px;
   right: 6px;
   bottom: 6px;
+<<<<<<< HEAD
   border-radius: 50%;
   background: linear-gradient(135deg, #B8956A, #D4A574);
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+=======
+  border-radius: 4px;
+  background: linear-gradient(135deg, #CC5A42, var(--accent-orange));
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .logo-text-small {
@@ -73,20 +105,35 @@
   z-index: 1;
   font-size: 1.8rem;
   font-weight: 900;
+<<<<<<< HEAD
   color: #2C1810;
   text-shadow: 
     1px 1px 2px rgba(255, 255, 255, 0.3),
     -1px -1px 2px rgba(0, 0, 0, 0.3);
+=======
+  color: var(--primary-navy);
+  text-shadow: 
+    1px 1px 2px rgba(255, 255, 255, 0.4),
+    -1px -1px 2px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(255, 255, 255, 0.3);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   letter-spacing: 1px;
 }
 
 .brand-name {
   font-size: 1.8rem;
   font-weight: 700;
+<<<<<<< HEAD
   color: #D4A574;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
   text-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
+=======
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .brand-tagline {
@@ -110,10 +157,18 @@
 .footer-title {
   font-size: 1.2rem;
   font-weight: 600;
+<<<<<<< HEAD
   color: #D4A574;
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+=======
+  color: var(--text-accent);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .footer-list {
@@ -142,8 +197,14 @@
 
 .footer-list button:hover,
 .footer-list a:hover {
+<<<<<<< HEAD
   color: #F4E4BC;
   transform: translateX(5px);
+=======
+  color: var(--bright-orange);
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(255, 179, 71, 0.4);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .social-links-footer {
@@ -164,8 +225,14 @@
 }
 
 .social-link-footer:hover {
+<<<<<<< HEAD
   color: #D4A574;
   transform: translateX(5px);
+=======
+  color: var(--text-accent);
+  transform: translateX(5px);
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .social-icon {
@@ -177,7 +244,11 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
+<<<<<<< HEAD
   border-top: 1px solid rgba(212, 165, 116, 0.2);
+=======
+  border-top: 1px solid rgba(255, 107, 53, 0.2);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   position: relative;
   z-index: 1;
 }
@@ -198,15 +269,22 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+<<<<<<< HEAD
   background: rgba(212, 165, 116, 0.1);
   border: 2px solid rgba(212, 165, 116, 0.3);
   color: #D4A574;
+=======
+  background: rgba(255, 107, 53, 0.1);
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  color: var(--text-accent);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
   font-weight: 500;
+<<<<<<< HEAD
   backdrop-filter: blur(10px);
 }
 
@@ -214,6 +292,19 @@
   background: rgba(212, 165, 116, 0.2);
   border-color: rgba(212, 165, 116, 0.5);
   transform: translateY(-2px);
+=======
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 107, 53, 0.05);
+}
+
+.scroll-to-top:hover {
+  background: rgba(255, 107, 53, 0.2);
+  border-color: rgba(255, 107, 53, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 20px rgba(255, 107, 53, 0.3),
+    inset 0 0 30px rgba(255, 107, 53, 0.1);
+>>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .scroll-arrow-up {
