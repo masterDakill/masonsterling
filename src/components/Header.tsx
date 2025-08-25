@@ -1,0 +1,69 @@
+import { useState } from 'react';
+import './Header.css';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header className="header">
+      <nav className="nav">
+        <div className="nav-brand">
+          <span className="brand-text">MASON STERLING</span>
+        </div>
+        
+        <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+          <button 
+            className="nav-link" 
+            onClick={() => scrollToSection('home')}
+          >
+            HOME
+          </button>
+          <button 
+            className="nav-link" 
+            onClick={() => scrollToSection('music')}
+          >
+            MUSIC
+          </button>
+          <button 
+            className="nav-link" 
+            onClick={() => scrollToSection('tour')}
+          >
+            TOUR
+          </button>
+          <button 
+            className="nav-link" 
+            onClick={() => scrollToSection('about')}
+          >
+            ABOUT
+          </button>
+          <button 
+            className="nav-link" 
+            onClick={() => scrollToSection('contact')}
+          >
+            CONTACT
+          </button>
+        </div>
+
+        <button 
+          className="nav-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
