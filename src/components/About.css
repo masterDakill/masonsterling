@@ -1,15 +1,9 @@
 .about {
   padding: 8rem 0;
   background: linear-gradient(180deg, 
-<<<<<<< HEAD
     #0a0a0a 0%, 
     #16213e 50%, 
     #0a0a0a 100%
-=======
-    var(--primary-navy) 0%, 
-    var(--secondary-navy) 50%, 
-    var(--primary-navy) 100%
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   );
   position: relative;
 }
@@ -22,13 +16,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-<<<<<<< HEAD
     radial-gradient(circle at 30% 40%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 70% 60%, rgba(244, 228, 188, 0.08) 0%, transparent 50%);
-=======
-    radial-gradient(circle at 30% 40%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(255, 140, 66, 0.06) 0%, transparent 50%);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   pointer-events: none;
 }
 
@@ -47,23 +36,13 @@
 .section-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 900;
-<<<<<<< HEAD
   color: #D4A574;
-=======
-  color: var(--text-accent);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-shadow: 
-<<<<<<< HEAD
     0 0 20px rgba(212, 165, 116, 0.3),
     0 4px 8px rgba(0, 0, 0, 0.3);
-=======
-    0 0 25px rgba(255, 107, 53, 0.6),
-    0 0 50px rgba(255, 107, 53, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .text-content {
@@ -73,18 +52,10 @@
 .intro-text {
   font-size: 1.3rem;
   font-weight: 300;
-<<<<<<< HEAD
   color: #F4E4BC;
   line-height: 1.6;
   margin-bottom: 2rem;
   font-style: italic;
-=======
-  color: var(--bright-orange);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  font-style: italic;
-  text-shadow: 0 0 10px rgba(255, 179, 71, 0.3);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .text-content p {
@@ -100,11 +71,7 @@
   gap: 2rem;
   margin-top: 3rem;
   padding-top: 2rem;
-<<<<<<< HEAD
   border-top: 1px solid rgba(212, 165, 116, 0.3);
-=======
-  border-top: 1px solid rgba(255, 107, 53, 0.3);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .achievement-item {
@@ -115,13 +82,8 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 900;
-<<<<<<< HEAD
   color: #D4A574;
   text-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
-=======
-  color: var(--text-accent);
-  text-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   margin-bottom: 0.5rem;
 }
 
@@ -145,7 +107,6 @@
   width: 400px;
   height: 500px;
   background: linear-gradient(135deg, 
-<<<<<<< HEAD
     rgba(212, 165, 116, 0.1) 0%, 
     rgba(244, 228, 188, 0.05) 50%, 
     rgba(212, 165, 116, 0.1) 100%
@@ -159,22 +120,6 @@
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-=======
-    rgba(255, 107, 53, 0.08) 0%, 
-    rgba(255, 140, 66, 0.04) 50%, 
-    rgba(255, 107, 53, 0.08) 100%
-  );
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 107, 53, 0.3);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 20px 60px rgba(11, 20, 38, 0.6),
-    0 0 30px rgba(255, 107, 53, 0.2),
-    inset 0 1px 0 rgba(255, 107, 53, 0.1);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .artist-frame::before {
@@ -184,11 +129,7 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-<<<<<<< HEAD
   border: 2px solid rgba(212, 165, 116, 0.2);
-=======
-  border: 2px solid rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 15px;
   pointer-events: none;
 }
@@ -201,19 +142,11 @@
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, 
-<<<<<<< HEAD
     rgba(212, 165, 116, 0.05), 
     rgba(244, 228, 188, 0.05)
   );
   border-radius: 10px;
   border: 1px dashed rgba(212, 165, 116, 0.3);
-=======
-    rgba(255, 107, 53, 0.05), 
-    rgba(255, 140, 66, 0.03)
-  );
-  border-radius: 10px;
-  border: 1px dashed rgba(255, 107, 53, 0.3);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .artist-icon {
@@ -224,18 +157,10 @@
 
 .artist-caption {
   font-size: 1rem;
-<<<<<<< HEAD
   color: #D4A574;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-=======
-  color: var(--text-accent);
-  letter-spacing: 2px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 @media (max-width: 1024px) {

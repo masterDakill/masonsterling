@@ -1,19 +1,11 @@
 .contact {
   padding: 8rem 0;
   background: linear-gradient(180deg, 
-<<<<<<< HEAD
     #0a0a0a 0%, 
     #1a1a2e 25%, 
     #16213e 50%, 
     #0f3460 75%, 
     #533483 100%
-=======
-    var(--primary-navy) 0%, 
-    var(--secondary-navy) 25%, 
-    #243a5e 50%, 
-    #2d4a6e 75%, 
-    #3d5a8e 100%
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   );
   position: relative;
 }
@@ -26,13 +18,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-<<<<<<< HEAD
     radial-gradient(circle at 25% 25%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(244, 228, 188, 0.08) 0%, transparent 50%);
-=======
-    radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 140, 66, 0.08) 0%, transparent 50%);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   pointer-events: none;
 }
 
@@ -52,23 +39,13 @@
 .section-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 900;
-<<<<<<< HEAD
   color: #D4A574;
-=======
-  color: var(--text-accent);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 2rem;
   text-shadow: 
-<<<<<<< HEAD
     0 0 20px rgba(212, 165, 116, 0.3),
     0 4px 8px rgba(0, 0, 0, 0.3);
-=======
-    0 0 25px rgba(255, 107, 53, 0.6),
-    0 0 50px rgba(255, 107, 53, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .contact-description {
@@ -96,16 +73,9 @@
 }
 
 .contact-method:hover {
-<<<<<<< HEAD
   background: rgba(212, 165, 116, 0.1);
   border-color: rgba(212, 165, 116, 0.3);
   transform: translateX(5px);
-=======
-  background: rgba(255, 107, 53, 0.1);
-  border-color: rgba(255, 107, 53, 0.3);
-  transform: translateX(5px);
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .method-icon {
@@ -115,18 +85,10 @@
 
 .method-info h4 {
   font-size: 1.1rem;
-<<<<<<< HEAD
   color: #D4A574;
   margin-bottom: 0.25rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-=======
-  color: var(--text-accent);
-  margin-bottom: 0.25rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .method-info p {
@@ -142,18 +104,10 @@
 
 .social-media h4 {
   font-size: 1.2rem;
-<<<<<<< HEAD
   color: #D4A574;
   margin-bottom: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
-=======
-  color: var(--text-accent);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .social-grid {
@@ -177,18 +131,10 @@
 }
 
 .social-item:hover {
-<<<<<<< HEAD
   color: #D4A574;
   transform: translateY(-2px);
   background: rgba(212, 165, 116, 0.1);
   border-color: rgba(212, 165, 116, 0.3);
-=======
-  color: var(--text-accent);
-  transform: translateY(-2px);
-  background: rgba(255, 107, 53, 0.1);
-  border-color: rgba(255, 107, 53, 0.3);
-  box-shadow: 0 0 15px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .social-icon {
@@ -196,23 +142,12 @@
 }
 
 .contact-form-container {
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2.5rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(212, 165, 116, 0.2);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-=======
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
-  padding: 2.5rem;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 107, 53, 0.2);
-  box-shadow: 
-    0 20px 60px rgba(11, 20, 38, 0.6),
-    0 0 30px rgba(255, 107, 53, 0.1);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .contact-form {
@@ -228,23 +163,14 @@
 .form-input {
   width: 100%;
   padding: 1rem 1.5rem;
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(212, 165, 116, 0.3);
-=======
-  background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 107, 53, 0.3);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 10px;
   color: white;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   backdrop-filter: blur(5px);
-=======
-  backdrop-filter: blur(8px);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .form-input::placeholder {
@@ -253,17 +179,9 @@
 
 .form-input:focus {
   outline: none;
-<<<<<<< HEAD
   border-color: #D4A574;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0 20px rgba(212, 165, 116, 0.2);
-=======
-  border-color: var(--accent-orange);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 
-    0 0 20px rgba(255, 107, 53, 0.3),
-    0 0 40px rgba(255, 107, 53, 0.1);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .form-select {
@@ -282,15 +200,9 @@
 
 .submit-btn {
   padding: 1.2rem 2rem;
-<<<<<<< HEAD
   background: linear-gradient(135deg, #D4A574, #F4E4BC);
   color: #2C1810;
   border: none;
-=======
-  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
-  color: var(--text-primary);
-  border: 1px solid var(--bright-orange);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 700;
@@ -298,13 +210,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
-=======
-  box-shadow: 
-    0 8px 25px rgba(255, 107, 53, 0.4),
-    0 0 20px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   position: relative;
   overflow: hidden;
 }
@@ -326,14 +232,7 @@
 
 .submit-btn:hover {
   transform: translateY(-3px);
-<<<<<<< HEAD
   box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
-=======
-  box-shadow: 
-    0 12px 35px rgba(255, 107, 53, 0.6),
-    0 0 30px rgba(255, 107, 53, 0.4);
-  background: linear-gradient(135deg, var(--neon-orange), var(--bright-orange));
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 @media (max-width: 1024px) {

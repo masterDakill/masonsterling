@@ -1,15 +1,9 @@
 .discography {
   padding: 8rem 0;
   background: linear-gradient(180deg, 
-<<<<<<< HEAD
     #0a0a0a 0%, 
     #1a1a2e 50%, 
     #0a0a0a 100%
-=======
-    var(--primary-navy) 0%, 
-    var(--secondary-navy) 50%, 
-    var(--primary-navy) 100%
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   );
   position: relative;
 }
@@ -22,13 +16,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-<<<<<<< HEAD
     radial-gradient(circle at 20% 20%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(244, 228, 188, 0.05) 0%, transparent 50%);
-=======
-    radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 140, 66, 0.08) 0%, transparent 50%);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   pointer-events: none;
 }
 
@@ -48,23 +37,13 @@
 .section-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
-<<<<<<< HEAD
   color: #D4A574;
-=======
-  color: var(--text-accent);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-shadow: 
-<<<<<<< HEAD
     0 0 20px rgba(212, 165, 116, 0.3),
     0 4px 8px rgba(0, 0, 0, 0.3);
-=======
-    0 0 25px rgba(255, 107, 53, 0.6),
-    0 0 50px rgba(255, 107, 53, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .albums-grid {
@@ -75,7 +54,6 @@
 }
 
 .album-card {
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2rem;
@@ -84,19 +62,6 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-=======
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 2rem;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 107, 53, 0.2);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 8px 32px rgba(11, 20, 38, 0.6),
-    inset 0 1px 0 rgba(255, 107, 53, 0.1);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .album-card::before {
@@ -107,13 +72,8 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-<<<<<<< HEAD
     rgba(212, 165, 116, 0.1) 0%, 
     rgba(244, 228, 188, 0.05) 50%, 
-=======
-    rgba(255, 107, 53, 0.08) 0%, 
-    rgba(255, 140, 66, 0.04) 50%, 
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
     transparent 100%
   );
   opacity: 0;
@@ -128,16 +88,9 @@
 .album-card:hover {
   transform: translateY(-10px);
   box-shadow: 
-<<<<<<< HEAD
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 30px rgba(212, 165, 116, 0.2);
   border-color: rgba(212, 165, 116, 0.4);
-=======
-    0 20px 60px rgba(11, 20, 38, 0.8),
-    0 0 40px rgba(255, 107, 53, 0.3),
-    inset 0 1px 0 rgba(255, 107, 53, 0.2);
-  border-color: rgba(255, 107, 53, 0.5);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .album-cover {
@@ -192,7 +145,6 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-<<<<<<< HEAD
   background: linear-gradient(135deg, #D4A574, #F4E4BC);
   border: none;
   color: #2C1810;
@@ -200,28 +152,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
-=======
-  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
-  border: 2px solid var(--bright-orange);
-  color: var(--text-primary);
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 8px 25px rgba(255, 107, 53, 0.4),
-    0 0 20px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .play-btn:hover {
   transform: scale(1.1);
-<<<<<<< HEAD
   box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
-=======
-  box-shadow: 
-    0 12px 35px rgba(255, 107, 53, 0.6),
-    0 0 30px rgba(255, 107, 53, 0.4);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .album-info {
@@ -256,15 +191,9 @@
 .listen-btn {
   width: 100%;
   padding: 0.8rem 1.5rem;
-<<<<<<< HEAD
   background: linear-gradient(135deg, #D4A574, #F4E4BC);
   color: #2C1810;
   border: none;
-=======
-  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
-  color: var(--text-primary);
-  border: 1px solid var(--bright-orange);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -272,25 +201,12 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   box-shadow: 0 8px 25px rgba(212, 165, 116, 0.2);
-=======
-  box-shadow: 
-    0 8px 25px rgba(255, 107, 53, 0.3),
-    0 0 15px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .listen-btn:hover {
   transform: translateY(-2px);
-<<<<<<< HEAD
   box-shadow: 0 12px 35px rgba(212, 165, 116, 0.3);
-=======
-  box-shadow: 
-    0 12px 35px rgba(255, 107, 53, 0.5),
-    0 0 25px rgba(255, 107, 53, 0.3);
-  background: linear-gradient(135deg, var(--neon-orange), var(--bright-orange));
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .streaming-links {
@@ -314,18 +230,10 @@
 }
 
 .streaming-link:hover {
-<<<<<<< HEAD
   background: rgba(212, 165, 116, 0.2);
   color: #D4A574;
   transform: translateY(-2px);
   border-color: rgba(212, 165, 116, 0.4);
-=======
-  background: rgba(255, 107, 53, 0.2);
-  color: var(--text-accent);
-  transform: translateY(-2px);
-  border-color: rgba(255, 107, 53, 0.4);
-  box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 .streaming-icon {
@@ -337,13 +245,8 @@
   width: 100%;
   padding: 0.8rem 1.5rem;
   background: transparent;
-<<<<<<< HEAD
   color: #D4A574;
   border: 2px solid #D4A574;
-=======
-  color: var(--text-accent);
-  border: 2px solid var(--accent-orange);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -351,7 +254,6 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
 }
 
 .stream-btn:hover {
@@ -359,18 +261,6 @@
   color: #2C1810;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(212, 165, 116, 0.2);
-=======
-  box-shadow: inset 0 0 20px rgba(255, 107, 53, 0.05);
-}
-
-.stream-btn:hover {
-  background: var(--accent-orange);
-  color: var(--text-primary);
-  transform: translateY(-2px);
-  box-shadow: 
-    0 8px 25px rgba(255, 107, 53, 0.3),
-    0 0 20px rgba(255, 107, 53, 0.2);
->>>>>>> 6f74a03 (feat: Update website design to match new brand assets)
 }
 
 @media (max-width: 768px) {
