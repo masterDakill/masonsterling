@@ -1,8 +1,8 @@
 export default {
   apps: [{
-    name: 'mason-sterling-website',
+    name: 'mason-sterling-site-francais',
     script: 'vite',
-    args: '--host 0.0.0.0 --port 3000',
+    args: '--host 0.0.0.0 --port 3001',
     cwd: '/home/user/webapp',
     instances: 1,
     autorestart: true,
@@ -10,7 +10,7 @@ export default {
     max_memory_restart: '1G',
     env: {
       NODE_ENV: 'development',
-      PORT: 3000
+      PORT: 3001
     }
   }]
 };
