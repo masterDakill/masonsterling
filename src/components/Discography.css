@@ -1,9 +1,9 @@
 .discography {
   padding: 8rem 0;
   background: linear-gradient(180deg, 
-    #0a0a0a 0%, 
-    #1a1a2e 50%, 
-    #0a0a0a 100%
+    var(--primary-navy) 0%, 
+    var(--secondary-navy) 50%, 
+    var(--primary-navy) 100%
   );
   position: relative;
 }
@@ -16,8 +16,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 20%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(244, 228, 188, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 140, 66, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -37,12 +37,12 @@
 .section-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
-  color: #D4A574;
+  color: var(--accent-orange);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-shadow: 
-    0 0 20px rgba(212, 165, 116, 0.3),
+    0 0 20px rgba(255, 107, 53, 0.3),
     0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -58,7 +58,7 @@
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 165, 116, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.2);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -72,8 +72,8 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    rgba(212, 165, 116, 0.1) 0%, 
-    rgba(244, 228, 188, 0.05) 50%, 
+    rgba(255, 107, 53, 0.1) 0%, 
+    rgba(255, 140, 66, 0.05) 50%, 
     transparent 100%
   );
   opacity: 0;
@@ -89,8 +89,21 @@
   transform: translateY(-10px);
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 30px rgba(212, 165, 116, 0.2);
-  border-color: rgba(212, 165, 116, 0.4);
+    0 0 30px rgba(255, 107, 53, 0.2);
+  border-color: rgba(255, 107, 53, 0.4);
+}
+
+.album-card.unavailable {
+  opacity: 0.7;
+  border-color: rgba(184, 197, 214, 0.2);
+}
+
+.album-card.unavailable:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(184, 197, 214, 0.1);
+  border-color: rgba(184, 197, 214, 0.3);
 }
 
 .album-cover {
@@ -145,18 +158,18 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #D4A574, #F4E4BC);
+  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
   border: none;
-  color: #2C1810;
+  color: var(--primary-navy);
   font-size: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
 }
 
 .play-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
 }
 
 .album-info {
@@ -175,7 +188,7 @@
 
 .album-artist {
   font-size: 0.9rem;
-  color: #D4A574;
+  color: var(--text-accent);
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -191,8 +204,8 @@
 .listen-btn {
   width: 100%;
   padding: 0.8rem 1.5rem;
-  background: linear-gradient(135deg, #D4A574, #F4E4BC);
-  color: #2C1810;
+  background: linear-gradient(135deg, var(--accent-orange), var(--neon-orange));
+  color: var(--primary-navy);
   border: none;
   border-radius: 25px;
   font-weight: 600;
@@ -201,12 +214,12 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
 }
 
 .listen-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(212, 165, 116, 0.3);
+  box-shadow: 0 12px 35px rgba(255, 107, 53, 0.3);
 }
 
 .streaming-links {
@@ -230,10 +243,10 @@
 }
 
 .streaming-link:hover {
-  background: rgba(212, 165, 116, 0.2);
-  color: #D4A574;
+  background: rgba(255, 107, 53, 0.2);
+  color: var(--accent-orange);
   transform: translateY(-2px);
-  border-color: rgba(212, 165, 116, 0.4);
+  border-color: rgba(255, 107, 53, 0.4);
 }
 
 .streaming-icon {
@@ -245,8 +258,8 @@
   width: 100%;
   padding: 0.8rem 1.5rem;
   background: transparent;
-  color: #D4A574;
-  border: 2px solid #D4A574;
+  color: var(--accent-orange);
+  border: 2px solid var(--accent-orange);
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -257,10 +270,10 @@
 }
 
 .stream-btn:hover {
-  background: #D4A574;
-  color: #2C1810;
+  background: var(--accent-orange);
+  color: var(--primary-navy);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -297,5 +310,87 @@
   .streaming-icon {
     width: 16px;
     height: 16px;
+  }
+}
+
+/* SoundCloud Embed Styles */
+.soundcloud-embed {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.soundcloud-embed iframe {
+  width: 100%;
+  height: 120px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Coming Soon Styles */
+.coming-soon {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, 
+    rgba(184, 197, 214, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 2px dashed rgba(184, 197, 214, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.coming-soon:hover {
+  border-color: rgba(184, 197, 214, 0.4);
+  background: linear-gradient(135deg, 
+    rgba(184, 197, 214, 0.15) 0%, 
+    rgba(255, 255, 255, 0.08) 100%
+  );
+}
+
+.coming-soon-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-desc {
+  font-size: 0.8rem;
+  color: rgba(184, 197, 214, 0.8);
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for new elements */
+@media (max-width: 768px) {
+  .soundcloud-embed {
+    margin-top: 0.8rem;
+  }
+  
+  .soundcloud-embed iframe {
+    height: 100px;
+  }
+  
+  .coming-soon {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .coming-soon-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .coming-soon-desc {
+    font-size: 0.7rem;
   }
 }

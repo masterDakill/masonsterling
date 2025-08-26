@@ -1,9 +1,9 @@
 export default {
   apps: [{
-    name: 'mason-sterling-website',
+    name: 'mason-sterling-updated',
     script: 'vite',
     args: '--host 0.0.0.0 --port 3000',
-    cwd: '/home/user/webapp',
+    cwd: '/home/user/masonsterling-new',
     instances: 1,
     autorestart: true,
     watch: false,
