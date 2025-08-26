@@ -17,69 +17,43 @@ interface MultiverseTrack {
 
 const multiverseTracks: MultiverseTrack[] = [
   {
-    id: 'karaoke-mood',
-    title: "ROADS WE TRAVEL",
+    id: 'drawn-to-unknown',
+    title: "DRAWN TO THE UNKNOWN",
     artist: "MASON STERLING",
-    style: "Karaoké",
-    description: "Version instrumentale parfaite pour vos sessions karaoké - chantez votre cœur",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "/assets/audio/road-we-travel-karaoke.wav", 
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-karaoke",
-    isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF1493, #8B008B, #4B0082)",
-    styleIcon: "🎤"
-  },
-  {
-    id: 'lounge-mood',
-    title: "ROADS WE TRAVEL",
-    artist: "MASON STERLING", 
-    style: "Lounge",
-    description: "Ambiance douce et sophistiquée pour vos soirées détente",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "/assets/audio/road-we-travel-lounge.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-lounge",
-    isAvailable: true,
-    gradient: "linear-gradient(135deg, #667eea, #764ba2, #f093fb)",
-    styleIcon: "🍷"
-  },
-  {
-    id: 'dance-mood',
-    title: "ROADS WE TRAVEL",
-    artist: "MASON STERLING",
-    style: "Dance",
-    description: "Remix électronisant qui vous fera danser toute la nuit",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "/assets/audio/road-we-travel-dance.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-dance",
+    style: "Single",
+    description: "Le premier single de Mason Sterling - Une exploration sonore de l'inconnu avec des mélodies captivantes",
+    cover: "/assets/images/multiverse-audio-logo.png",
+    audioFile: "/assets/audio/drawn-to-the-unknown.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/drawn-to-the-unknown",
     isAvailable: true,
     gradient: "linear-gradient(135deg, #FF6B35, #FF8C42, #FFA07A)",
-    styleIcon: "💃"
+    styleIcon: "🌌"
   },
   {
-    id: 'rock-mood',
-    title: "ROADS WE TRAVEL",
+    id: 'more-than-my-name',
+    title: "MORE THAN MY NAME",
     artist: "MASON STERLING",
-    style: "Rock",
-    description: "Version puissante et énergique pour la route et l'aventure",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "/assets/audio/road-we-travel-rock.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-rock",
+    style: "Single (For Samantha)",
+    description: "Un titre personnel et émotionnel dédié à Samantha - Une ballade touchante sur l'identité et l'amour",
+    cover: "/assets/images/multiverse-audio-logo.png",
+    audioFile: "/assets/audio/more-than-my-name-for-samantha.wav",
+    soundcloudUrl: "",
     isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF4500, #DC143C, #B22222)",
-    styleIcon: "🎸"
+    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)",
+    styleIcon: "💝"
   },
   {
-    id: 'cinematic-mood',
-    title: "ROADS WE TRAVEL",
+    id: 'loves-journey-ep',
+    title: "LOVE'S JOURNEY",
     artist: "MASON STERLING",
-    style: "Cinématique", 
-    description: "Arrangement orchestral épique digne des plus grands films",
+    style: "EP - 5 Titres",
+    description: "L'EP complet de Mason Sterling avec 5 titres explorant l'amour sous toutes ses formes",
     cover: "/assets/images/choose-your-mood.png",
-    audioFile: "/assets/audio/road-we-travel-cinematic.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-cinematic",
-    isAvailable: true,
+    audioFile: "",
+    soundcloudUrl: "",
+    isAvailable: false,
     gradient: "linear-gradient(135deg, #4facfe, #00f2fe, #667eea)",
-    styleIcon: "🎭"
+    styleIcon: "💿"
   }
 ];
 
@@ -183,23 +157,45 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
       )}
 
       <div className="track-actions">
-        <button 
-          className="soundcloud-btn"
-          onClick={() => window.open(track.soundcloudUrl, '_blank')}
-        >
-          🎵 ÉCOUTER SUR SOUNDCLOUD
-        </button>
-        <button 
-          className="download-btn"
-          onClick={() => {
-            const link = document.createElement('a');
-            link.href = track.audioFile;
-            link.download = `${track.title} - ${track.artist}.wav`;
-            link.click();
-          }}
-        >
-          ⬇️ TÉLÉCHARGER
-        </button>
+        {track.isAvailable ? (
+          <>
+            {track.soundcloudUrl ? (
+              <button 
+                className="soundcloud-btn"
+                onClick={() => window.open(track.soundcloudUrl, '_blank')}
+              >
+                🎵 ÉCOUTER SUR SOUNDCLOUD
+              </button>
+            ) : (
+              <button 
+                className="soundcloud-btn disabled"
+                disabled
+              >
+                🎵 LIEN SOUNDCLOUD BIENTÔT
+              </button>
+            )}
+            {track.audioFile ? (
+              <button 
+                className="download-btn"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = track.audioFile;
+                  link.download = `${track.title} - ${track.artist}.wav`;
+                  link.click();
+                }}
+              >
+                ⬇️ ÉCOUTER PREVIEW
+              </button>
+            ) : null}
+          </>
+        ) : (
+          <div className="coming-soon-actions">
+            <button className="coming-soon-btn" disabled>
+              🎵 BIENTÔT DISPONIBLE
+            </button>
+            <p className="release-info">EP Love's Journey arrive prochainement</p>
+          </div>
+        )}
       </div>
 
       <audio
@@ -229,21 +225,14 @@ const Multiverse = () => {
           <div className="section-brand">
             <div className="section-tagline">
               <span className="artist-name">MASON STERLING</span>
-              <span className="presents">PRESENTS</span>
+              <span className="presents">DISCOGRAPHIE OFFICIELLE</span>
             </div>
-            <h2 className="section-title">ROADS WE TRAVEL</h2>
+            <h2 className="section-title">SINGLES & EP</h2>
           </div>
           <p className="section-subtitle">
-            Une chanson. Cinq univers émotionnels.<br/>
-            <strong>Choisissez votre ambiance et vivez la musique autrement.</strong>
+            Découvrez l'univers musical complet de Mason Sterling.<br/>
+            <strong>Des singles touchants à l'EP "Love's Journey" - Une exploration de l'amour et de l'émotion.</strong>
           </p>
-          <div className="mood-selector">
-            <img 
-              src="/assets/images/choose-your-mood.png" 
-              alt="Choose Your Mood - 5 Musical Universes"
-              className="choose-mood-image"
-            />
-          </div>
         </div>
         
         <div className="multiverse-grid">
