@@ -1,8 +1,8 @@
 module.exports = {
   apps: [{
-    name: 'mason-sterling-site-francais',
+    name: 'mason-sterling-multiverse-audio',
     script: 'npm',
-    args: 'run dev -- --host 0.0.0.0 --port 3001',
+    args: 'run dev',
     cwd: '/home/user/webapp',
     instances: 1,
     autorestart: true,
@@ -10,7 +10,8 @@ module.exports = {
     max_memory_restart: '1G',
     env: {
       NODE_ENV: 'development',
-      PORT: 3001
+      PORT: 3001,
+      VITE_HOST: '0.0.0.0'
     }
   }]
 };
