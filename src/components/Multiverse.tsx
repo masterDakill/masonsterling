@@ -22,7 +22,7 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING",
     style: "Acoustique Folk",
     description: "Un voyage musical introspectif avec des guitares acoustiques et des mélodies émotionnelles",
-    cover: "/assets/images/albums/endless-journey.jpg",
+    cover: "/assets/images/albums/endless-journey.svg",
     audioFile: "/assets/audio/endless-journey.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/endless-journey",
     isAvailable: true,
@@ -35,7 +35,7 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING", 
     style: "Country Rock",
     description: "Une fusion énergique de country et rock avec des rythmes entraînants",
-    cover: "/assets/images/albums/road-we-travel.jpg",
+    cover: "/assets/images/albums/road-we-travel.svg",
     audioFile: "/assets/audio/road-we-travel.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel",
     isAvailable: true,
@@ -48,7 +48,7 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING",
     style: "Synthwave Pop",
     description: "Sons synthétiques rétro-futuristes avec des beats électroniques captivants",
-    cover: "/assets/images/albums/neon-love.jpg",
+    cover: "/assets/images/albums/neon-love.svg",
     audioFile: "/assets/audio/neon-love.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/neon-love",
     isAvailable: true,
@@ -61,7 +61,7 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING",
     style: "Karaoké Ballad",
     description: "Ballade émotionnelle parfaite pour les sessions karaoké avec arrangement orchestral",
-    cover: "/assets/images/albums/my-heart-is-open.jpg",
+    cover: "/assets/images/albums/my-heart-is-open.svg",
     audioFile: "/assets/audio/my-heart-is-open.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/my-heart-is-open",
     isAvailable: true,
@@ -74,7 +74,7 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING",
     style: "Ambient Cinématique", 
     description: "Paysages sonores atmosphériques et mélodies contemplatives",
-    cover: "/assets/images/albums/stars-above.jpg",
+    cover: "/assets/images/albums/stars-above.svg",
     audioFile: "/assets/audio/stars-above.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/stars-above",
     isAvailable: true,
@@ -143,6 +143,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
         />
         <div className="track-fallback">
           <span className="style-icon">{track.styleIcon}</span>
+          <div className="track-title-overlay">{track.title}</div>
         </div>
         
         <div className="track-overlay">
