@@ -39,8 +39,8 @@ const albums: Album[] = [
     isAvailable: true
   },
   {
-    id: 'untitled-album',
-    title: "UPCOMING RELEASE",
+    id: 'upcoming-release',
+    title: "PROCHAINE SORTIE",
     artist: "MASON STERLING",
     cover: "✨",
     gradient: "linear-gradient(135deg, #4facfe, #00f2fe, #667eea)",
@@ -75,7 +75,7 @@ const AlbumCard = ({ album }: { album: Album }) => {
               className="listen-btn"
               onClick={() => window.open(album.soundcloudUrl, '_blank')}
             >
-              LISTEN NOW
+              ÉCOUTER MAINTENANT
             </button>
             <div className="soundcloud-embed">
               <iframe
@@ -104,7 +104,7 @@ const Discography = () => {
     <section id="music" className="discography">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">DISCOGRAPHY</h2>
+          <h2 className="section-title">DISCOGRAPHIE</h2>
         </div>
         
         <div className="albums-grid">

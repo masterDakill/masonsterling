@@ -7,7 +7,7 @@
   color: rgba(255, 255, 255, 0.9);
   background-color: #0B1426;
 
-  /* Brand Colors - Navy Blue & Orange Neon */
+  /* Couleurs de Marque - Bleu Marine & Orange Néon */
   --primary-navy: #0B1426;
   --secondary-navy: #1a2847;
   --accent-orange: #FF6B35;
@@ -78,7 +78,7 @@ input, textarea, select {
   font-family: inherit;
 }
 
-/* Scrollbar Styling */
+/* Style de la Barre de Défilement */
 ::-webkit-scrollbar {
   width: 8px;
 }
