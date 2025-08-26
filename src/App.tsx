@@ -7,10 +7,12 @@ import BehindTheIA from './components/BehindTheIA'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
+import DynamicBackground from './components/DynamicBackground'
 
 function App() {
   return (
     <div className="App">
+      <DynamicBackground />
       <ScrollProgress />
       <Header />
       <main>

@@ -1,11 +1,27 @@
 .App {
   min-height: 100vh;
-  background: var(--primary-navy);
+  position: relative;
   color: var(--text-primary);
+  /* Remove static background since we have dynamic background */
 }
 
 main {
   padding-top: 80px; /* Account for fixed header */
+  position: relative;
+  z-index: 1; /* Ensure content stays above dynamic background */
+}
+
+/* Enhanced content visibility with dynamic background */
+section {
+  position: relative;
+  background: rgba(11, 20, 38, 0.1); /* Subtle background for readability */
+  backdrop-filter: blur(2px);
+}
+
+/* Ensure better contrast for text over dynamic backgrounds */
+.section-content {
+  position: relative;
+  z-index: 2;
 }
 
 /* Utility Classes */
