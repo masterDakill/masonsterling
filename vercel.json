@@ -4,6 +4,7 @@
   "framework": "vite",
   "installCommand": "npm install",
   "cleanUrls": true,
+  "_comment": "Force redeploy with Multiverse Musical - August 26 2025",
   "headers": [
     {
       "source": "/images/(.*)",
