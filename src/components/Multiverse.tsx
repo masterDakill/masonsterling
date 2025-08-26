@@ -218,10 +218,16 @@ const Multiverse = () => {
     <section id="multiverse" className="multiverse">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">MULTIVERSE MUSICAL</h2>
+          <div className="section-brand">
+            <h2 className="section-title">MULTIVERSE AUDIO</h2>
+            <div className="section-tagline">
+              <span className="artist-name">MASON STERLING</span>
+              <span className="presents">PRESENTS</span>
+            </div>
+          </div>
           <p className="section-subtitle">
-            Explorez différents univers musicaux - Du folk acoustique au synthwave, 
-            chaque chanson vous transporte dans un style unique
+            Explorez différents univers musicaux avec Mason Sterling - 
+            Du folk acoustique au synthwave, chaque chanson vous transporte dans un style unique sous le label Multiverse Audio
           </p>
         </div>
         
@@ -232,7 +238,8 @@ const Multiverse = () => {
         </div>
 
         <div className="media-links">
-          <h3>RETROUVEZ-MOI SUR</h3>
+          <h3>MASON STERLING × MULTIVERSE AUDIO</h3>
+          <p className="media-subtitle">Retrouvez l'univers musical complet sur toutes les plateformes</p>
           <div className="social-links">
             <a href="#" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
               💼 LinkedIn

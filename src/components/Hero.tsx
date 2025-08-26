@@ -10,12 +10,17 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-logo">
           <div className="logo-circle">
-            <span className="logo-text">MS</span>
+            <span className="logo-text">MA</span>
           </div>
         </div>
         
         <h1 className="hero-title">MASON STERLING</h1>
-        <p className="hero-subtitle">SYNTHWAVE COUNTRY ARTIST</p>
+        <div className="hero-brand-fusion">
+          <span className="hero-label">MULTIVERSE AUDIO</span>
+          <span className="hero-separator">×</span>
+          <span className="hero-genre">SYNTHWAVE COUNTRY</span>
+        </div>
+        <p className="hero-subtitle">Artist • Producer • Multiverse Explorer</p>
         
         <div className="hero-actions">
           <button 

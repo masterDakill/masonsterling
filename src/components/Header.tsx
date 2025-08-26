@@ -16,7 +16,10 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
-          <span className="brand-text">MASON STERLING</span>
+          <div className="brand-main">
+            <span className="brand-text">MASON STERLING</span>
+            <span className="brand-label">MULTIVERSE AUDIO</span>
+          </div>
         </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>

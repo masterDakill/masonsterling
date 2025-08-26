@@ -22,13 +22,44 @@
   margin-bottom: 60px;
 }
 
+.section-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
 .section-title {
   font-size: 3.5rem;
   font-weight: 900;
   color: var(--accent-orange);
   text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-  margin-bottom: 20px;
   letter-spacing: 3px;
+  margin: 0;
+}
+
+.section-tagline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.9;
+}
+
+.artist-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.presents {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .section-subtitle {
@@ -296,8 +327,15 @@
   color: var(--accent-orange);
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   letter-spacing: 2px;
+}
+
+.media-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
 .social-links {

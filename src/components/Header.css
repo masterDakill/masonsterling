@@ -23,12 +23,28 @@
   align-items: center;
 }
 
+.brand-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .brand-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #D4A574;
+  color: var(--accent-orange);
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+  line-height: 1.2;
+}
+
+.brand-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: -2px;
 }
 
 .nav-menu {
