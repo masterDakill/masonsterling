@@ -20,15 +20,15 @@ const Hero = () => {
         <div className="hero-actions">
           <button 
             className="btn btn-primary"
-            onClick={() => document.getElementById('music')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('multiverse')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            LISTEN NOW
+            EXPLORER LE MULTIVERSE
           </button>
           <button 
             className="btn btn-secondary"
-            onClick={() => document.getElementById('tour')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            TOUR DATES
+            NEWSLETTER
           </button>
         </div>
       </div>

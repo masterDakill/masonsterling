@@ -41,7 +41,7 @@ const Newsletter = () => {
   }
 
   return (
-    <section className="newsletter">
+    <section id="newsletter" className="newsletter">
       <div className="container">
         <div className="newsletter-content">
           <div className="newsletter-text">

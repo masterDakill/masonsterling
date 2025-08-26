@@ -1,8 +1,8 @@
-export default {
+module.exports = {
   apps: [{
     name: 'mason-sterling-site-francais',
-    script: 'vite',
-    args: '--host 0.0.0.0 --port 3001',
+    script: 'npm',
+    args: 'run dev -- --host 0.0.0.0 --port 3001',
     cwd: '/home/user/webapp',
     instances: 1,
     autorestart: true,

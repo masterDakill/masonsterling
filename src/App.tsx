@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Discography from './components/Discography'
+import Multiverse from './components/Multiverse'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Discography />
+        <Multiverse />
         <Newsletter />
       </main>
       <Footer />
