@@ -32,11 +32,18 @@ const LinktreeSection = () => {
       color: 'linear-gradient(135deg, #ff0000 0%, #cc0000 100%)'
     },
     {
-      name: 'SoundCloud',
+      name: 'SoundCloud Profile',
       url: 'https://soundcloud.com/masonsterling',
       icon: '🎵',
-      description: 'Stream my tracks',
+      description: 'All my tracks & updates',
       color: 'linear-gradient(135deg, #ff8500 0%, #ff6100 100%)'
+    },
+    {
+      name: 'More than my Name',
+      url: 'https://on.soundcloud.com/2EJrQkb3FySBQeyCEf',
+      icon: '💝',
+      description: 'Listen to my personal track',
+      color: 'linear-gradient(135deg, #FF6B9D 0%, #C44569 50%, #8B2635 100%)'
     },
     {
       name: 'TikTok',

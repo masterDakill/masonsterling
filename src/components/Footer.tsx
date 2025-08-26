@@ -37,7 +37,7 @@ const Footer = () => {
               <h4 className="footer-title">Music</h4>
               <ul className="footer-list">
                 <li><a href="https://youtube.com/playlist?list=PL_2ylY9_71_tyc69170HmzFItt72LoVzs&si=yk7OeAG0oIl33oGO" target="_blank" rel="noopener noreferrer">Drawn to the Unknown</a></li>
-                <li><a href="https://soundcloud.com/masonsterling" target="_blank" rel="noopener noreferrer">More than my Name</a></li>
+                <li><a href="https://on.soundcloud.com/2EJrQkb3FySBQeyCEf" target="_blank" rel="noopener noreferrer">More than my Name</a></li>
                 <li><a href="http://www.masonsterling-ai.com" target="_blank" rel="noopener noreferrer">Love's Journey EP</a></li>
                 <li><a href="https://www.youtube.com/@MasonSterling-r3p" target="_blank" rel="noopener noreferrer">Latest Singles</a></li>
               </ul>

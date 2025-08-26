@@ -15,8 +15,9 @@
 - **Fichier**: `public/assets/audio/more-than-my-name-for-samantha.wav`
 - **Format**: WAV (Format original)
 - **Taille**: 40 MB
-- **Statut**: ✅ Audio placeholder (à remplacer par version authentique si disponible)
-- **Description**: Titre personnel dédié à Samantha
+- **Statut**: ✅ Audio placeholder avec lien SoundCloud authentique
+- **URL SoundCloud**: https://on.soundcloud.com/2EJrQkb3FySBQeyCEf
+- **Description**: Titre personnel dédié à Samantha - Lien streaming authentique
 
 ### 📂 Autres Assets Audio
 - **endless-journey.wav**: Placeholder (121 bytes)

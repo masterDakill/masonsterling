@@ -37,7 +37,7 @@ const multiverseTracks: MultiverseTrack[] = [
     description: "Un titre personnel et émotionnel dédié à Samantha - Une ballade touchante sur l'identité et l'amour",
     cover: "/assets/images/multiverse-audio-logo.png",
     audioFile: "/assets/audio/more-than-my-name-for-samantha.wav",
-    soundcloudUrl: "",
+    soundcloudUrl: "https://on.soundcloud.com/2EJrQkb3FySBQeyCEf",
     isAvailable: true,
     gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
     styleIcon: "💝"
