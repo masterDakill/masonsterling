@@ -17,7 +17,7 @@ const backgroundSections: BackgroundSection[] = [
     id: 'hero',
     name: 'Hero - Mason Sterling Intro',
     startPosition: 0,
-    endPosition: 0.25,
+    endPosition: 0.2,
     gradient: 'radial-gradient(ellipse at center, rgba(255, 107, 53, 0.3) 0%, rgba(11, 20, 38, 0.9) 50%, rgba(11, 20, 38, 1) 100%)',
     overlay: 'linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(22, 36, 71, 0.8) 100%)',
     patterns: ['choose-your-mood.png', 'backgrounds/musical-pattern.svg'],
@@ -26,8 +26,8 @@ const backgroundSections: BackgroundSection[] = [
   {
     id: 'multiverse',
     name: 'Multiverse Audio - Musical Universe',
-    startPosition: 0.25,
-    endPosition: 0.5,
+    startPosition: 0.2,
+    endPosition: 0.4,
     gradient: 'radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.4) 0%, rgba(22, 36, 71, 0.8) 40%, rgba(11, 20, 38, 1) 100%)',
     overlay: 'linear-gradient(45deg, rgba(255, 139, 66, 0.2) 0%, rgba(11, 20, 38, 0.9) 70%)',
     patterns: ['multiverse-audio-logo.png', 'choose-your-mood.png', 'backgrounds/musical-pattern.svg'],
@@ -36,8 +36,8 @@ const backgroundSections: BackgroundSection[] = [
   {
     id: 'lyrics',
     name: 'Lyrics Visualized - Emotional Journey',
-    startPosition: 0.5,
-    endPosition: 0.75,
+    startPosition: 0.4,
+    endPosition: 0.6,
     gradient: 'radial-gradient(ellipse at 80% 20%, rgba(196, 69, 105, 0.4) 0%, rgba(139, 38, 53, 0.6) 30%, rgba(11, 20, 38, 1) 100%)',
     overlay: 'linear-gradient(270deg, rgba(255, 107, 157, 0.15) 0%, rgba(22, 36, 71, 0.85) 100%)',
     patterns: ['choose-your-mood.png', 'backgrounds/lyrics-pattern.svg'],
@@ -46,12 +46,22 @@ const backgroundSections: BackgroundSection[] = [
   {
     id: 'behind-ia',
     name: 'Behind the IA - Artistic Evolution',
-    startPosition: 0.75,
-    endPosition: 1.0,
+    startPosition: 0.6,
+    endPosition: 0.8,
     gradient: 'radial-gradient(circle at 60% 40%, rgba(79, 172, 254, 0.3) 0%, rgba(0, 242, 254, 0.2) 30%, rgba(11, 20, 38, 1) 100%)',
     overlay: 'linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, rgba(11, 20, 38, 0.95) 100%)',
     patterns: ['multiverse-audio-logo.png', 'backgrounds/ai-pattern.svg'],
     intensity: 0.5
+  },
+  {
+    id: 'linktree',
+    name: 'Linktree - Connect Everywhere',
+    startPosition: 0.8,
+    endPosition: 1.0,
+    gradient: 'radial-gradient(circle at 50% 50%, rgba(67, 233, 123, 0.3) 0%, rgba(56, 249, 215, 0.2) 30%, rgba(11, 20, 38, 1) 100%)',
+    overlay: 'linear-gradient(135deg, rgba(67, 233, 123, 0.1) 0%, rgba(11, 20, 38, 0.9) 100%)',
+    patterns: ['choose-your-mood.png', 'backgrounds/musical-pattern.svg'],
+    intensity: 0.6
   }
 ];
 
@@ -181,12 +191,14 @@ const DynamicBackground = () => {
               ${currentSection.id === 'hero' ? 'rgba(255, 107, 53, 0.3)' :
                 currentSection.id === 'multiverse' ? 'rgba(255, 139, 66, 0.3)' :
                 currentSection.id === 'lyrics' ? 'rgba(196, 69, 105, 0.3)' :
-                'rgba(79, 172, 254, 0.3)'} 0deg, 
+                currentSection.id === 'behind-ia' ? 'rgba(79, 172, 254, 0.3)' :
+                'rgba(67, 233, 123, 0.3)'} 0deg, 
               transparent 120deg, 
               ${currentSection.id === 'hero' ? 'rgba(22, 36, 71, 0.4)' :
                 currentSection.id === 'multiverse' ? 'rgba(11, 20, 38, 0.4)' :
                 currentSection.id === 'lyrics' ? 'rgba(139, 38, 53, 0.4)' :
-                'rgba(102, 126, 234, 0.4)'} 240deg)`,
+                currentSection.id === 'behind-ia' ? 'rgba(102, 126, 234, 0.4)' :
+                'rgba(56, 249, 215, 0.4)'} 240deg)`,
             opacity: dynamicIntensity * 0.7,
           }}
         />

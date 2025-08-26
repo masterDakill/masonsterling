@@ -402,6 +402,43 @@
 }
 
 /* Responsive Design */
+/* Social Platform Specific Styles */
+.social-link.youtube-playlist:hover {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  border-color: #ff0000;
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4);
+}
+
+.social-link.youtube:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4);
+}
+
+.social-link.tiktok:hover {
+  background: linear-gradient(45deg, #ff0050, #00f2ea);
+  border-color: #ff0050;
+  box-shadow: 0 15px 30px rgba(255, 0, 80, 0.4);
+}
+
+.social-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: transparent;
+  box-shadow: 0 15px 30px rgba(188, 24, 136, 0.4);
+}
+
+.social-link.facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  box-shadow: 0 15px 30px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.spotify:hover {
+  background: #1db954;
+  border-color: #1db954;
+  box-shadow: 0 15px 30px rgba(29, 185, 84, 0.4);
+}
+
 @media (max-width: 768px) {
   .section-title { font-size: 2.5rem; }
   .multiverse-grid { grid-template-columns: 1fr; gap: 30px; }

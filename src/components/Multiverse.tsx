@@ -202,19 +202,25 @@ const Multiverse = () => {
 
         <div className="media-links">
           <h3>MASON STERLING × MULTIVERSE AUDIO</h3>
-          <p className="media-subtitle">Retrouvez l'univers musical complet sur toutes les plateformes</p>
+          <p className="media-subtitle">❤️ Singing about love & healing, one verse at a time! 🎶✨</p>
           <div className="social-links">
-            <a href="#" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
-              💼 LinkedIn
+            <a href="https://youtube.com/playlist?list=PL_2ylY9_71_tyc69170HmzFItt72LoVzs&si=yk7OeAG0oIl33oGO" className="social-link youtube-playlist" target="_blank" rel="noopener noreferrer">
+              🎵 Drawn to the Unknown - Playlist
+            </a>
+            <a href="https://www.youtube.com/@MasonSterling-r3p" className="social-link youtube" target="_blank" rel="noopener noreferrer">
+              📺 YouTube
             </a>
             <a href="https://soundcloud.com/masonsterling" className="social-link soundcloud" target="_blank" rel="noopener noreferrer">
               🎵 SoundCloud  
             </a>
-            <a href="#" className="social-link spotify" target="_blank" rel="noopener noreferrer">
-              🟢 Spotify
+            <a href="http://www.tiktok.com/@mason_sterling" className="social-link tiktok" target="_blank" rel="noopener noreferrer">
+              🎬 TikTok
             </a>
-            <a href="#" className="social-link instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/mason683847" className="social-link instagram" target="_blank" rel="noopener noreferrer">
               📸 Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61578043131723" className="social-link facebook" target="_blank" rel="noopener noreferrer">
+              👥 Facebook
             </a>
           </div>
         </div>
