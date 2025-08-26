@@ -22,6 +22,17 @@
   margin-bottom: 60px;
 }
 
+.multiverse-logo {
+  margin-bottom: 30px;
+}
+
+.logo-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
+}
+
 .section-brand {
   display: flex;
   flex-direction: column;
@@ -30,13 +41,30 @@
   margin-bottom: 20px;
 }
 
+.mood-selector {
+  margin: 30px 0;
+}
+
+.choose-mood-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 15px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.choose-mood-image:hover {
+  transform: scale(1.02);
+}
+
 .section-title {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   font-weight: 900;
-  color: var(--accent-orange);
-  text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-  letter-spacing: 3px;
-  margin: 0;
+  color: white;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  margin: 10px 0;
 }
 
 .section-tagline {
@@ -207,11 +235,16 @@
 
 .track-style {
   color: var(--accent-orange);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 10px;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-orange);
+  display: inline-block;
 }
 
 .track-title {

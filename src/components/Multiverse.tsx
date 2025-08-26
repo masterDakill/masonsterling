@@ -17,69 +17,69 @@ interface MultiverseTrack {
 
 const multiverseTracks: MultiverseTrack[] = [
   {
-    id: 'endless-journey',
-    title: "ENDLESS JOURNEY",
+    id: 'karaoke-mood',
+    title: "ROADS WE TRAVEL",
     artist: "MASON STERLING",
-    style: "Acoustique Folk",
-    description: "Un voyage musical introspectif avec des guitares acoustiques et des mélodies émotionnelles",
-    cover: "/assets/images/albums/endless-journey.svg",
-    audioFile: "/assets/audio/endless-journey.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/endless-journey",
+    style: "Karaoké",
+    description: "Version instrumentale parfaite pour vos sessions karaoké - chantez votre cœur",
+    cover: "/assets/images/choose-your-mood.png",
+    audioFile: "/assets/audio/road-we-travel-karaoke.wav", 
+    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-karaoke",
     isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF9A9E, #FECFEF, #FECFEF)",
-    styleIcon: "🎸"
-  },
-  {
-    id: 'road-we-travel',
-    title: "ROAD WE TRAVEL",
-    artist: "MASON STERLING", 
-    style: "Country Rock",
-    description: "Une fusion énergique de country et rock avec des rythmes entraînants",
-    cover: "/assets/images/albums/road-we-travel.svg",
-    audioFile: "/assets/audio/road-we-travel.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel",
-    isAvailable: true,
-    gradient: "linear-gradient(135deg, #667eea, #764ba2, #f093fb)",
-    styleIcon: "🤠"
-  },
-  {
-    id: 'neon-love',
-    title: "NEON LOVE",
-    artist: "MASON STERLING",
-    style: "Synthwave Pop",
-    description: "Sons synthétiques rétro-futuristes avec des beats électroniques captivants",
-    cover: "/assets/images/albums/neon-love.svg",
-    audioFile: "/assets/audio/neon-love.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/neon-love",
-    isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF6B35, #FF8C42, #FFA07A)",
-    styleIcon: "🌆"
-  },
-  {
-    id: 'my-heart-is-open',
-    title: "MY HEART IS OPEN",
-    artist: "MASON STERLING",
-    style: "Karaoké Ballad",
-    description: "Ballade émotionnelle parfaite pour les sessions karaoké avec arrangement orchestral",
-    cover: "/assets/images/albums/my-heart-is-open.svg",
-    audioFile: "/assets/audio/my-heart-is-open.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/my-heart-is-open",
-    isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)",
+    gradient: "linear-gradient(135deg, #FF1493, #8B008B, #4B0082)",
     styleIcon: "🎤"
   },
   {
-    id: 'stars-above',
-    title: "STARS ABOVE",
+    id: 'lounge-mood',
+    title: "ROADS WE TRAVEL",
+    artist: "MASON STERLING", 
+    style: "Lounge",
+    description: "Ambiance douce et sophistiquée pour vos soirées détente",
+    cover: "/assets/images/choose-your-mood.png",
+    audioFile: "/assets/audio/road-we-travel-lounge.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-lounge",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #667eea, #764ba2, #f093fb)",
+    styleIcon: "🍷"
+  },
+  {
+    id: 'dance-mood',
+    title: "ROADS WE TRAVEL",
     artist: "MASON STERLING",
-    style: "Ambient Cinématique", 
-    description: "Paysages sonores atmosphériques et mélodies contemplatives",
-    cover: "/assets/images/albums/stars-above.svg",
-    audioFile: "/assets/audio/stars-above.wav",
-    soundcloudUrl: "https://soundcloud.com/masonsterling/stars-above",
+    style: "Dance",
+    description: "Remix électronisant qui vous fera danser toute la nuit",
+    cover: "/assets/images/choose-your-mood.png",
+    audioFile: "/assets/audio/road-we-travel-dance.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-dance",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF6B35, #FF8C42, #FFA07A)",
+    styleIcon: "💃"
+  },
+  {
+    id: 'rock-mood',
+    title: "ROADS WE TRAVEL",
+    artist: "MASON STERLING",
+    style: "Rock",
+    description: "Version puissante et énergique pour la route et l'aventure",
+    cover: "/assets/images/choose-your-mood.png",
+    audioFile: "/assets/audio/road-we-travel-rock.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-rock",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF4500, #DC143C, #B22222)",
+    styleIcon: "🎸"
+  },
+  {
+    id: 'cinematic-mood',
+    title: "ROADS WE TRAVEL",
+    artist: "MASON STERLING",
+    style: "Cinématique", 
+    description: "Arrangement orchestral épique digne des plus grands films",
+    cover: "/assets/images/choose-your-mood.png",
+    audioFile: "/assets/audio/road-we-travel-cinematic.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/roads-we-travel-cinematic",
     isAvailable: true,
     gradient: "linear-gradient(135deg, #4facfe, #00f2fe, #667eea)",
-    styleIcon: "✨"
+    styleIcon: "🎭"
   }
 ];
 
@@ -219,17 +219,31 @@ const Multiverse = () => {
     <section id="multiverse" className="multiverse">
       <div className="container">
         <div className="section-header">
+          <div className="multiverse-logo">
+            <img 
+              src="/assets/images/multiverse-audio-logo.png" 
+              alt="Multiverse Audio Logo"
+              className="logo-image"
+            />
+          </div>
           <div className="section-brand">
-            <h2 className="section-title">MULTIVERSE AUDIO</h2>
             <div className="section-tagline">
               <span className="artist-name">MASON STERLING</span>
               <span className="presents">PRESENTS</span>
             </div>
+            <h2 className="section-title">ROADS WE TRAVEL</h2>
           </div>
           <p className="section-subtitle">
-            Explorez différents univers musicaux avec Mason Sterling - 
-            Du folk acoustique au synthwave, chaque chanson vous transporte dans un style unique sous le label Multiverse Audio
+            Une chanson. Cinq univers émotionnels.<br/>
+            <strong>Choisissez votre ambiance et vivez la musique autrement.</strong>
           </p>
+          <div className="mood-selector">
+            <img 
+              src="/assets/images/choose-your-mood.png" 
+              alt="Choose Your Mood - 5 Musical Universes"
+              className="choose-mood-image"
+            />
+          </div>
         </div>
         
         <div className="multiverse-grid">
