@@ -1,0 +1,159 @@
+/* Animations d'entrée pour les sections */
+.animated-section {
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-section.animate {
+  opacity: 1;
+}
+
+/* FadeInUp - L'animation principale */
+.fadeInUp {
+  transform: translateY(60px);
+}
+
+.fadeInUp.animate {
+  transform: translateY(0);
+}
+
+/* FadeInLeft - Entrée par la gauche */
+.fadeInLeft {
+  transform: translateX(-60px);
+}
+
+.fadeInLeft.animate {
+  transform: translateX(0);
+}
+
+/* FadeInRight - Entrée par la droite */
+.fadeInRight {
+  transform: translateX(60px);
+}
+
+.fadeInRight.animate {
+  transform: translateX(0);
+}
+
+/* FadeIn - Apparition simple */
+.fadeIn.animate {
+  opacity: 1;
+}
+
+/* SlideInUp - Glissement vers le haut */
+.slideInUp {
+  transform: translateY(100px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideInUp.animate {
+  transform: translateY(0);
+}
+
+/* ZoomIn - Effet de zoom */
+.zoomIn {
+  transform: scale(0.8);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.zoomIn.animate {
+  transform: scale(1);
+}
+
+/* Effets de stagger pour les éléments multiples */
+.animated-section:nth-child(1) { animation-delay: 0ms; }
+.animated-section:nth-child(2) { animation-delay: 150ms; }
+.animated-section:nth-child(3) { animation-delay: 300ms; }
+.animated-section:nth-child(4) { animation-delay: 450ms; }
+.animated-section:nth-child(5) { animation-delay: 600ms; }
+
+/* Animations spécifiques pour les cartes */
+.track-card-enter {
+  animation: trackCardEnter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes trackCardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotateX(15deg);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(10px) rotateX(5deg);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+/* Animation pour les éléments de navigation */
+.nav-item-enter {
+  animation: navItemEnter 0.6s ease-out forwards;
+}
+
+@keyframes navItemEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pour les textes */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal .text-content {
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal.animate .text-content {
+  transform: translateY(0);
+}
+
+/* Version mobile - animations plus douces */
+@media (max-width: 768px) {
+  .animated-section {
+    transition-duration: 0.4s;
+  }
+  
+  .fadeInUp {
+    transform: translateY(30px);
+  }
+  
+  .fadeInLeft,
+  .fadeInRight {
+    transform: translateX(30px);
+  }
+  
+  .slideInUp {
+    transform: translateY(50px);
+  }
+}
+
+/* Réduction des animations pour les utilisateurs préférant moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    transition-duration: 0.1s;
+  }
+  
+  .fadeInUp,
+  .fadeInLeft, 
+  .fadeInRight,
+  .slideInUp {
+    transform: none;
+  }
+  
+  .zoomIn {
+    transform: none;
+  }
+}

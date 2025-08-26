@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react';
+import AnimatedSection from './AnimatedSection';
+import SoundCloudPlayer from './SoundCloudPlayer';
+import SocialShare from './SocialShare';
 import './Multiverse.css';
 
 interface MultiverseTrack {
@@ -103,8 +106,9 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
   };
 
   return (
-    <div className="multiverse-card">
-      <div className="track-visual" style={{ background: track.gradient }}>
+    <AnimatedSection animation="fadeInUp" delay={200} className="track-card-enter">
+      <div className="multiverse-card">
+        <div className="track-visual" style={{ background: track.gradient }}>
         <img 
           src={track.cover} 
           alt={track.title}
@@ -156,37 +160,58 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
         </div>
       )}
 
+      {/* Widget SoundCloud intégré */}
+      {track.isAvailable && track.soundcloudUrl && (
+        <div className="soundcloud-section">
+          <SoundCloudPlayer 
+            url={track.soundcloudUrl}
+            title={track.title}
+            artist={track.artist}
+            minimal={false}
+          />
+        </div>
+      )}
+
       <div className="track-actions">
         {track.isAvailable ? (
           <>
-            {track.soundcloudUrl ? (
-              <button 
-                className="soundcloud-btn"
-                onClick={() => window.open(track.soundcloudUrl, '_blank')}
-              >
-                🎵 ÉCOUTER SUR SOUNDCLOUD
-              </button>
-            ) : (
-              <button 
-                className="soundcloud-btn disabled"
-                disabled
-              >
-                🎵 LIEN SOUNDCLOUD BIENTÔT
-              </button>
-            )}
-            {track.audioFile ? (
-              <button 
-                className="download-btn"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = track.audioFile;
-                  link.download = `${track.title} - ${track.artist}.wav`;
-                  link.click();
-                }}
-              >
-                ⬇️ ÉCOUTER PREVIEW
-              </button>
-            ) : null}
+            <div className="primary-actions">
+              {track.soundcloudUrl ? (
+                <button 
+                  className="soundcloud-btn enhanced"
+                  onClick={() => window.open(track.soundcloudUrl, '_blank')}
+                >
+                  🎵 ÉCOUTER SUR SOUNDCLOUD
+                </button>
+              ) : (
+                <button 
+                  className="soundcloud-btn disabled"
+                  disabled
+                >
+                  🎵 LIEN SOUNDCLOUD BIENTÔT
+                </button>
+              )}
+              {track.audioFile && (
+                <button 
+                  className="download-btn enhanced"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = track.audioFile;
+                    link.download = `${track.title} - ${track.artist}.wav`;
+                    link.click();
+                  }}
+                >
+                  ⬇️ ÉCOUTER PREVIEW
+                </button>
+              )}
+            </div>
+            <div className="secondary-actions">
+              <SocialShare 
+                title={track.title}
+                artist={track.artist}
+                track={track.title}
+              />
+            </div>
           </>
         ) : (
           <div className="coming-soon-actions">
@@ -206,15 +231,18 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
         onEnded={() => setIsPlaying(false)}
         preload="metadata"
       />
-    </div>
+      </div>
+    </AnimatedSection>
   );
 };
 
 const Multiverse = () => {
   return (
     <section id="multiverse" className="multiverse">
-      <div className="container">
-        <div className="section-header">
+      <AnimatedSection animation="fadeIn" delay={100}>
+        <div className="container">
+          <AnimatedSection animation="slideInUp" delay={300}>
+            <div className="section-header">
           <div className="multiverse-logo">
             <img 
               src="/assets/images/multiverse-audio-logo.png" 
@@ -233,15 +261,19 @@ const Multiverse = () => {
             Découvrez l'univers musical complet de Mason Sterling.<br/>
             <strong>Des singles touchants à l'EP "Love's Journey" - Une exploration de l'amour et de l'émotion.</strong>
           </p>
-        </div>
+            </div>
+          </AnimatedSection>
         
-        <div className="multiverse-grid">
-          {multiverseTracks.map((track) => (
-            <MultiverseTrackCard key={track.id} track={track} />
-          ))}
-        </div>
+          <AnimatedSection animation="fadeInUp" delay={500}>
+            <div className="multiverse-grid">
+            {multiverseTracks.map((track) => (
+              <MultiverseTrackCard key={track.id} track={track} />
+            ))}
+            </div>
+          </AnimatedSection>
 
-        <div className="media-links">
+          <AnimatedSection animation="fadeInUp" delay={700}>
+            <div className="media-links">
           <h3>MASON STERLING × MULTIVERSE AUDIO</h3>
           <p className="media-subtitle">Retrouvez l'univers musical complet sur toutes les plateformes</p>
           <div className="social-links">
@@ -258,8 +290,10 @@ const Multiverse = () => {
               📸 Instagram
             </a>
           </div>
+            </div>
+          </AnimatedSection>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 };

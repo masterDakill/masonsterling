@@ -527,3 +527,186 @@
     align-items: center;
   }
 }
+
+/* === NOUVELLES OPTIMISATIONS UX & PERFORMANCE === */
+
+/* Section SoundCloud intégrée */
+.soundcloud-section {
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Actions améliorées */
+.primary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.secondary-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soundcloud-btn.enhanced,
+.download-btn.enhanced {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soundcloud-btn.enhanced::before,
+.download-btn.enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.soundcloud-btn.enhanced:hover::before,
+.download-btn.enhanced:hover::before {
+  left: 100%;
+}
+
+.soundcloud-btn.enhanced:hover,
+.download-btn.enhanced:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Effets de pulsation pour les boutons actifs */
+.soundcloud-btn.enhanced:active,
+.download-btn.enhanced:active {
+  animation: buttonPulse 0.3s ease;
+}
+
+@keyframes buttonPulse {
+  0% { transform: translateY(-3px) scale(1); }
+  50% { transform: translateY(-3px) scale(0.95); }
+  100% { transform: translateY(-3px) scale(1); }
+}
+
+/* Animation pour les éléments coming soon */
+.coming-soon-actions {
+  animation: comingSoonGlow 3s ease-in-out infinite;
+}
+
+@keyframes comingSoonGlow {
+  0%, 100% { 
+    box-shadow: 0 0 0 rgba(255, 107, 53, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+  }
+}
+
+/* Images avec loading lazy et optimisations */
+.track-artwork {
+  transition: all 0.4s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.track-artwork:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Effets de parallaxe pour les backgrounds */
+.track-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.track-visual::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: inherit;
+  animation: parallaxRotate 20s linear infinite;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+@keyframes parallaxRotate {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+/* Amélioration de l'accessibilité */
+.multiverse-card:focus-within {
+  outline: 2px solid #FF6B35;
+  outline-offset: 4px;
+}
+
+.soundcloud-btn:focus,
+.download-btn:focus {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+}
+
+/* Micro-interactions pour les hover states */
+.multiverse-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.multiverse-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 107, 53, 0.2);
+}
+
+/* Images responsives et lazy loading */
+.track-artwork {
+  loading: lazy;
+  decoding: async;
+  content-visibility: auto;
+}
+
+/* Optimisations mobile pour les nouvelles fonctionnalités */
+@media (max-width: 768px) {
+  .primary-actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .soundcloud-btn.enhanced,
+  .download-btn.enhanced {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+  
+  .track-visual::before {
+    animation-duration: 30s; /* Plus lent sur mobile */
+  }
+}
+
+/* Préférences utilisateur pour les animations */
+@media (prefers-reduced-motion: reduce) {
+  .track-visual::before,
+  .coming-soon-actions,
+  .buttonPulse {
+    animation: none;
+  }
+  
+  .soundcloud-btn.enhanced,
+  .download-btn.enhanced,
+  .track-artwork {
+    transition: none;
+  }
+  
+  .multiverse-card:hover {
+    transform: none;
+  }
+}

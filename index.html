@@ -1,12 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mason Sterling × Multiverse Audio - Synthwave Country Artist</title>
-    <meta name="description" content="Mason Sterling présente Multiverse Audio - Explorez différents univers musicaux du folk acoustique au synthwave. Écoutez directement les derniers albums." />
-    <meta name="keywords" content="Mason Sterling, Multiverse Audio, synthwave, country music, folk, artist, music, albums, multiverse musical" />
+    
+    <!-- SEO Principal -->
+    <title>Mason Sterling - Discographie Officielle | Singles "Drawn to the Unknown" & "More than my name"</title>
+    <meta name="description" content="Découvrez la discographie officielle de Mason Sterling : les singles 'Drawn to the Unknown' et 'More than my name (For Samantha)', plus l'EP 'Love's Journey' bientôt disponible. Écoutez directement sur SoundCloud." />
+    <meta name="keywords" content="Mason Sterling, Drawn to the Unknown, More than my name, Love's Journey EP, musique, singles, SoundCloud, artiste français, discographie officielle" />
+    <meta name="author" content="Mason Sterling" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://masonsterling.ai" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://masonsterling.ai" />
+    <meta property="og:title" content="Mason Sterling - Discographie Officielle | Singles & EP" />
+    <meta property="og:description" content="🎵 Découvrez 'Drawn to the Unknown' et 'More than my name (For Samantha)' - Les nouveaux singles de Mason Sterling. EP 'Love's Journey' bientôt disponible !" />
+    <meta property="og:image" content="https://masonsterling.ai/assets/images/multiverse-audio-logo.png" />
+    <meta property="og:site_name" content="Mason Sterling Official" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="music:musician" content="Mason Sterling" />
+    <meta property="music:song" content="Drawn to the Unknown" />
+    <meta property="music:song:url" content="https://soundcloud.com/masonsterling/drawn-to-the-unknown" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://masonsterling.ai" />
+    <meta name="twitter:title" content="Mason Sterling - Discographie Officielle" />
+    <meta name="twitter:description" content="🎵 Nouveaux singles : 'Drawn to the Unknown' & 'More than my name (For Samantha)'" />
+    <meta name="twitter:image" content="https://masonsterling.ai/assets/images/multiverse-audio-logo.png" />
+    <meta name="twitter:creator" content="@masonsterling" />
+    
+    <!-- Performance & Preloading -->
+    <link rel="preload" href="/assets/images/multiverse-audio-logo.png" as="image" type="image/png" />
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="dns-prefetch" href="//soundcloud.com" />
+    <link rel="preconnect" href="https://soundcloud.com" crossorigin />
+    
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Mason Sterling",
+      "url": "https://masonsterling.ai",
+      "sameAs": [
+        "https://soundcloud.com/masonsterling"
+      ],
+      "genre": ["Synthwave", "Country", "Folk"],
+      "description": "Artiste musical explorant différents univers sonores du folk acoustique au synthwave néon",
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "Love's Journey",
+          "albumReleaseType": "EP",
+          "numTracks": 5,
+          "datePublished": "2024"
+        }
+      ],
+      "track": [
+        {
+          "@type": "MusicRecording",
+          "name": "Drawn to the Unknown",
+          "url": "https://soundcloud.com/masonsterling/drawn-to-the-unknown",
+          "genre": "Synthwave",
+          "inAlbum": {
+            "@type": "MusicAlbum",
+            "name": "Singles Collection"
+          }
+        },
+        {
+          "@type": "MusicRecording", 
+          "name": "More than my name (For Samantha)",
+          "genre": "Folk",
+          "inAlbum": {
+            "@type": "MusicAlbum",
+            "name": "Singles Collection"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

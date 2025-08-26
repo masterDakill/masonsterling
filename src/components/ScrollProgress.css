@@ -1,0 +1,114 @@
+/* Indicateur de progression de scroll cosmique */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgba(11, 20, 38, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.scroll-progress-container.visible {
+  opacity: 1;
+}
+
+.scroll-progress-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #FF6B35, #FF8C42, #00f2fe);
+  position: relative;
+  transition: width 0.1s ease-out;
+}
+
+.scroll-progress-glow {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  width: 20px;
+  height: 8px;
+  background: radial-gradient(ellipse, #FF6B35, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #FF6B35;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.scroll-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-label {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.progress-label.start {
+  color: #4facfe;
+}
+
+.progress-label.middle {
+  color: #FF6B35;
+}
+
+.progress-label.end {
+  color: #FF6B9D;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .scroll-progress-labels {
+    padding: 6px 15px;
+    font-size: 0.6rem;
+  }
+  
+  .progress-label {
+    font-size: 0.6rem;
+  }
+}
+
+/* Version ultra mobile */
+@media (max-width: 480px) {
+  .scroll-progress-labels {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .progress-label {
+    font-size: 0.5rem;
+  }
+  
+  .progress-label.middle {
+    display: none;
+  }
+}

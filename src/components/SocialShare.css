@@ -1,0 +1,258 @@
+/* Boutons de partage social avancés */
+.social-share-container {
+  position: relative;
+  display: inline-block;
+}
+
+.share-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #FF6B35, #FF8C42);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.share-toggle-btn:hover {
+  background: linear-gradient(135deg, #FF8C42, #FFA07A);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.share-icon {
+  font-size: 1.1rem;
+}
+
+.share-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: rgba(11, 20, 38, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.share-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.share-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.share-header h4 {
+  color: #FF6B35;
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.share-header p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.share-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.share-btn.facebook {
+  background: linear-gradient(135deg, #1877F2, #42A5F5);
+}
+
+.share-btn.facebook:hover {
+  background: linear-gradient(135deg, #42A5F5, #64B5F6);
+}
+
+.share-btn.twitter {
+  background: linear-gradient(135deg, #1DA1F2, #42A5F5);
+}
+
+.share-btn.twitter:hover {
+  background: linear-gradient(135deg, #42A5F5, #64B5F6);
+}
+
+.share-btn.whatsapp {
+  background: linear-gradient(135deg, #25D366, #4CAF50);
+}
+
+.share-btn.whatsapp:hover {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+}
+
+.share-btn.telegram {
+  background: linear-gradient(135deg, #0088CC, #29B6F6);
+}
+
+.share-btn.telegram:hover {
+  background: linear-gradient(135deg, #29B6F6, #4FC3F7);
+}
+
+.share-btn.tiktok {
+  background: linear-gradient(135deg, #000000, #FF0050);
+}
+
+.share-btn.tiktok:hover {
+  background: linear-gradient(135deg, #FF0050, #FF4081);
+}
+
+.share-btn.instagram {
+  background: linear-gradient(135deg, #E4405F, #F77737, #FCAF45);
+}
+
+.share-btn.instagram:hover {
+  background: linear-gradient(135deg, #F77737, #FCAF45, #FFD54F);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.copy-link-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+.url-display {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.url-input {
+  flex: 1;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+}
+
+.copy-btn {
+  padding: 10px 12px;
+  background: rgba(255, 107, 53, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 8px;
+  color: #FF6B35;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 107, 53, 0.3);
+  border-color: rgba(255, 107, 53, 0.5);
+}
+
+.copy-btn.copied {
+  background: rgba(76, 175, 80, 0.2);
+  border-color: rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.copy-feedback {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  color: #4CAF50;
+  font-size: 0.8rem;
+  font-weight: 600;
+  animation: fadeInOut 2s ease;
+}
+
+.share-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: transparent;
+}
+
+/* Animations */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .share-dropdown {
+    width: 280px;
+    right: -50px;
+  }
+  
+  .share-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .share-btn {
+    justify-content: center;
+  }
+}
+
+/* Version ultra mobile */
+@media (max-width: 480px) {
+  .share-dropdown {
+    width: 260px;
+    right: -80px;
+    padding: 16px;
+  }
+  
+  .share-toggle-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .share-text {
+    display: none;
+  }
+}
