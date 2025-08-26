@@ -4,6 +4,20 @@
   background: linear-gradient(135deg, var(--primary-navy) 0%, #162447 50%, var(--primary-navy) 100%);
   position: relative;
   overflow: hidden;
+  /* Animation d'entrée pour la section */
+  animation: sectionFadeIn 1s ease-out;
+}
+
+/* Animations d'entrée */
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .multiverse::before {
@@ -20,6 +34,19 @@
 .section-header {
   text-align: center;
   margin-bottom: 60px;
+  /* Animation d'entrée pour le header */
+  animation: fadeInDown 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .multiverse-logo {
@@ -104,6 +131,19 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
   margin-bottom: 80px;
+  /* Animation d'entrée pour la grille */
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Multiverse Cards */
@@ -113,9 +153,27 @@
   overflow: hidden;
   border: 1px solid rgba(255, 107, 53, 0.2);
   backdrop-filter: blur(10px);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  /* Animation d'entrée différée pour chaque carte */
+  animation: cardFadeInScale 0.6s ease-out both;
 }
+
+@keyframes cardFadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Animation différée pour chaque carte */
+.multiverse-card:nth-child(1) { animation-delay: 0.6s; }
+.multiverse-card:nth-child(2) { animation-delay: 0.8s; }
+.multiverse-card:nth-child(3) { animation-delay: 1.0s; }
 
 .multiverse-card:hover {
   transform: translateY(-10px);
@@ -404,6 +462,8 @@
   text-align: center;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 107, 53, 0.2);
+  /* Animation d'entrée pour les liens médias */
+  animation: fadeInUp 0.8s ease-out 1.2s both;
 }
 
 .media-links h3 {

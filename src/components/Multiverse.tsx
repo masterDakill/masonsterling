@@ -208,8 +208,9 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
             <div className="secondary-actions">
               <SocialShare 
                 title={track.title}
-                artist={track.artist}
-                track={track.title}
+                url={track.soundcloudUrl || window.location.href}
+                description={track.description}
+                hashtags={['MasonSterling', 'Synthwave', 'MultiverseAudio', 'NewMusic']}
               />
             </div>
           </>

@@ -3,150 +3,114 @@ import './SocialShare.css';
 
 interface SocialShareProps {
   title: string;
-  url?: string;
-  artist?: string;
-  track?: string;
+  url: string;
+  description?: string;
+  hashtags?: string[];
+  className?: string;
 }
 
-const SocialShare: React.FC<SocialShareProps> = ({ 
-  title, 
-  url = window.location.href, 
-  artist = "Mason Sterling",
-  track 
+const SocialShare: React.FC<SocialShareProps> = ({
+  title,
+  url,
+  description = '',
+  hashtags = [],
+  className = ''
 }) => {
-  const [showShare, setShowShare] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const shareText = track 
-    ? `🎵 Découvrez "${track}" par ${artist} ! #MasonSterling #Musique`
-    : `🎵 Découvrez l'univers musical de ${artist} ! #MasonSterling #Multiverse`;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
 
   const shareLinks = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(shareText)}`,
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`,
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`,
-    telegram: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shareText)}`,
-    tiktok: `https://www.tiktok.com/`, // TikTok n'a pas d'API de partage direct
-    instagram: `https://www.instagram.com/` // Instagram non plus
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title + ' - ' + description)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}&hashtags=${hashtags.join(',')}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(title + ' - ' + url)}`,
+    telegram: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+    reddit: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`
+  };
+
+  const handleShare = (_platform: string, shareUrl: string) => {
+    window.open(shareUrl, '_blank', 'width=600,height=400');
   };
 
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
     } catch (err) {
-      console.error('Erreur lors de la copie:', err);
+      console.error('Failed to copy:', err);
     }
   };
 
-  const openShareWindow = (shareUrl: string) => {
-    window.open(
-      shareUrl,
-      'share',
-      'width=600,height=400,scrollbars=yes,resizable=yes'
-    );
-  };
+  const socialPlatforms = [
+    { key: 'facebook', name: 'Facebook', icon: '📘', color: '#1877f2' },
+    { key: 'twitter', name: 'Twitter/X', icon: '🐦', color: '#1da1f2' },
+    { key: 'linkedin', name: 'LinkedIn', icon: '💼', color: '#0077b5' },
+    { key: 'whatsapp', name: 'WhatsApp', icon: '💬', color: '#25d366' },
+    { key: 'telegram', name: 'Telegram', icon: '✈️', color: '#0088cc' },
+    { key: 'reddit', name: 'Reddit', icon: '🤖', color: '#ff4500' }
+  ];
 
   return (
-    <div className="social-share-container">
-      <button 
-        className="share-toggle-btn"
-        onClick={() => setShowShare(!showShare)}
-        title="Partager"
+    <div className={`social-share ${className} ${isExpanded ? 'expanded' : ''}`}>
+      <button
+        className="share-trigger"
+        onClick={() => setIsExpanded(!isExpanded)}
+        aria-label="Partager"
       >
-        <span className="share-icon">📤</span>
+        <span className="share-icon">🔗</span>
         <span className="share-text">Partager</span>
+        <span className={`expand-arrow ${isExpanded ? 'rotated' : ''}`}>▼</span>
       </button>
 
-      <div className={`share-dropdown ${showShare ? 'active' : ''}`}>
+      <div className="share-dropdown">
         <div className="share-header">
-          <h4>Partager cette musique</h4>
-          <p>{title}</p>
-        </div>
-
-        <div className="share-buttons">
-          <button
-            className="share-btn facebook"
-            onClick={() => openShareWindow(shareLinks.facebook)}
-            title="Partager sur Facebook"
+          <h4>Partager "{title}"</h4>
+          <button 
+            className="close-btn"
+            onClick={() => setIsExpanded(false)}
           >
-            <span className="btn-icon">📘</span>
-            <span>Facebook</span>
-          </button>
-
-          <button
-            className="share-btn twitter"
-            onClick={() => openShareWindow(shareLinks.twitter)}
-            title="Partager sur Twitter"
-          >
-            <span className="btn-icon">🐦</span>
-            <span>Twitter</span>
-          </button>
-
-          <button
-            className="share-btn whatsapp"
-            onClick={() => openShareWindow(shareLinks.whatsapp)}
-            title="Partager sur WhatsApp"
-          >
-            <span className="btn-icon">💬</span>
-            <span>WhatsApp</span>
-          </button>
-
-          <button
-            className="share-btn telegram"
-            onClick={() => openShareWindow(shareLinks.telegram)}
-            title="Partager sur Telegram"
-          >
-            <span className="btn-icon">✈️</span>
-            <span>Telegram</span>
-          </button>
-
-          <button
-            className="share-btn tiktok"
-            onClick={() => window.open(shareLinks.tiktok, '_blank')}
-            title="Ouvrir TikTok"
-          >
-            <span className="btn-icon">🎬</span>
-            <span>TikTok</span>
-          </button>
-
-          <button
-            className="share-btn instagram"
-            onClick={() => window.open(shareLinks.instagram, '_blank')}
-            title="Ouvrir Instagram"
-          >
-            <span className="btn-icon">📸</span>
-            <span>Instagram</span>
+            ✕
           </button>
         </div>
 
-        <div className="copy-link-section">
-          <div className="url-display">
-            <input 
-              type="text" 
-              value={url} 
-              readOnly 
-              className="url-input"
-            />
+        <div className="share-platforms">
+          {socialPlatforms.map((platform) => (
             <button
-              className={`copy-btn ${copied ? 'copied' : ''}`}
-              onClick={handleCopyLink}
-              title="Copier le lien"
+              key={platform.key}
+              className="platform-btn"
+              onClick={() => handleShare(platform.key, shareLinks[platform.key as keyof typeof shareLinks])}
+              style={{ '--platform-color': platform.color } as React.CSSProperties}
             >
-              {copied ? '✅' : '📋'}
+              <span className="platform-icon">{platform.icon}</span>
+              <span className="platform-name">{platform.name}</span>
             </button>
-          </div>
-          {copied && <span className="copy-feedback">Lien copié !</span>}
+          ))}
+          
+          <button
+            className="platform-btn copy-btn"
+            onClick={handleCopyLink}
+          >
+            <span className="platform-icon">{copySuccess ? '✅' : '📋'}</span>
+            <span className="platform-name">
+              {copySuccess ? 'Copié !' : 'Copier le lien'}
+            </span>
+          </button>
+        </div>
+
+        <div className="share-footer">
+          <p className="share-description">
+            {description && `"${description}"`}
+          </p>
+          {hashtags.length > 0 && (
+            <div className="hashtags">
+              {hashtags.map((tag) => (
+                <span key={tag} className="hashtag">#{tag}</span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-
-      {showShare && (
-        <div 
-          className="share-overlay"
-          onClick={() => setShowShare(false)}
-        />
-      )}
     </div>
   );
 };
