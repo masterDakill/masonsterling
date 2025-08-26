@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 /* Multiverse Section */
+=======
+/* Multiverse Section - Mason Sterling Premium */
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 .multiverse {
   padding: 100px 0;
   background: linear-gradient(135deg, var(--primary-navy) 0%, #162447 50%, var(--primary-navy) 100%);
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  animation: sectionFadeIn 1s ease-out;
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .multiverse::before {
@@ -17,6 +25,7 @@
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -31,6 +40,31 @@
   max-width: 300px;
   height: auto;
   filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.5));
+=======
+@keyframes sectionFadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.multiverse-logo { margin-bottom: 30px; }
+
+.logo-placeholder {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent-orange);
+  text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .section-brand {
@@ -41,6 +75,7 @@
   margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 .mood-selector {
   margin: 30px 0;
 }
@@ -58,6 +93,8 @@
   transform: scale(1.02);
 }
 
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 .section-title {
   font-size: 2.8rem;
   font-weight: 900;
@@ -104,6 +141,15 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
   margin-bottom: 80px;
+<<<<<<< HEAD
+=======
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 /* Multiverse Cards */
@@ -113,6 +159,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 107, 53, 0.2);
   backdrop-filter: blur(10px);
+<<<<<<< HEAD
   transition: all 0.4s ease;
   position: relative;
 }
@@ -120,6 +167,25 @@
 .multiverse-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+=======
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  animation: cardFadeInScale 0.6s ease-out both;
+}
+
+@keyframes cardFadeInScale {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.multiverse-card:nth-child(1) { animation-delay: 0.6s; }
+.multiverse-card:nth-child(2) { animation-delay: 0.8s; }
+.multiverse-card:nth-child(3) { animation-delay: 1.0s; }
+
+.multiverse-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3), 0 0 30px rgba(255, 107, 53, 0.1);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   border-color: var(--accent-orange);
 }
 
@@ -130,6 +196,7 @@
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .track-artwork {
   width: 100%;
   height: 100%;
@@ -141,13 +208,19 @@
   transform: scale(1.1);
 }
 
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 .track-fallback {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   display: none;
+=======
+  display: flex;
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -156,9 +229,13 @@
   padding: 20px;
 }
 
+<<<<<<< HEAD
 .track-fallback.show {
   display: flex;
 }
+=======
+.track-fallback.show { display: flex; }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 
 .track-title-overlay {
   color: white;
@@ -189,9 +266,13 @@
   transition: opacity 0.3s ease;
 }
 
+<<<<<<< HEAD
 .multiverse-card:hover .track-overlay {
   opacity: 1;
 }
+=======
+.multiverse-card:hover .track-overlay { opacity: 1; }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 
 .play-button {
   background: var(--accent-orange);
@@ -201,7 +282,11 @@
   border-radius: 50%;
   font-size: 1.5rem;
   cursor: pointer;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,9 +294,20 @@
 }
 
 .play-button:hover {
+<<<<<<< HEAD
   background: var(--neon-orange);
   transform: scale(1.1);
   box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+=======
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6), 0 0 40px rgba(255, 107, 53, 0.4);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6), 0 0 40px rgba(255, 107, 53, 0.4); }
+  50% { box-shadow: 0 6px 25px rgba(255, 107, 53, 0.8), 0 0 50px rgba(255, 107, 53, 0.6); }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .play-button.playing {
@@ -219,6 +315,7 @@
   animation: pulse 1.5s ease-in-out infinite alternate;
 }
 
+<<<<<<< HEAD
 @keyframes pulse {
   from {
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
@@ -232,6 +329,10 @@
 .track-info {
   padding: 25px;
 }
+=======
+/* Track Info */
+.track-info { padding: 25px; }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 
 .track-style {
   color: var(--accent-orange);
@@ -287,6 +388,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .seek-bar {
   width: 100%;
   height: 4px;
@@ -315,6 +417,8 @@
   border: none;
 }
 
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 /* Track Actions */
 .track-actions {
   padding: 0 25px 25px;
@@ -323,28 +427,40 @@
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 .soundcloud-btn,
 .download-btn {
   flex: 1;
   min-width: 140px;
+=======
+.soundcloud-btn {
+  width: 100%;
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   padding: 12px 20px;
   border: none;
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
+<<<<<<< HEAD
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .soundcloud-btn {
+=======
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   background: linear-gradient(45deg, #ff6b35, #ff8c42);
   color: white;
 }
 
 .soundcloud-btn:hover {
   background: linear-gradient(45deg, #ff5722, #ff6b35);
+<<<<<<< HEAD
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
@@ -359,6 +475,10 @@
   background: rgba(255, 255, 255, 0.2);
   border-color: var(--accent-orange);
   transform: translateY(-2px);
+=======
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 107, 53, 0.2);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .soundcloud-btn.disabled {
@@ -404,6 +524,10 @@
   text-align: center;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 107, 53, 0.2);
+<<<<<<< HEAD
+=======
+  animation: fadeInUp 0.8s ease-out 1.2s both;
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .media-links h3 {
@@ -440,13 +564,18 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   backdrop-filter: blur(10px);
 }
 
 .social-link:hover {
   background: var(--accent-orange);
   border-color: var(--accent-orange);
+<<<<<<< HEAD
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
 }
@@ -455,6 +584,10 @@
   background: #0077b5;
   border-color: #0077b5;
   box-shadow: 0 15px 30px rgba(0, 119, 181, 0.4);
+=======
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4), 0 0 30px rgba(255, 107, 53, 0.2);
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }
 
 .social-link.soundcloud:hover {
@@ -463,6 +596,7 @@
   box-shadow: 0 15px 30px rgba(255, 133, 0, 0.4);
 }
 
+<<<<<<< HEAD
 .social-link.spotify:hover {
   background: #1db954;
   border-color: #1db954;
@@ -526,4 +660,26 @@
     flex-direction: column;
     align-items: center;
   }
+=======
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title { font-size: 2.5rem; }
+  .multiverse-grid { grid-template-columns: 1fr; gap: 30px; }
+  .social-links { gap: 15px; }
+  .social-link { padding: 12px 20px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .multiverse { padding: 60px 0; }
+  .section-header { margin-bottom: 40px; }
+  .section-title { font-size: 2rem; }
+  .section-subtitle { font-size: 1rem; }
+  .social-links { flex-direction: column; align-items: center; }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .multiverse, .section-header, .multiverse-grid, .multiverse-card, .play-button, .social-link { animation: none; transition: none; }
+  .multiverse-card:hover, .play-button:hover, .social-link:hover { transform: none; }
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
+=======
+import { useState, useRef } from 'react';
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
 import './Multiverse.css';
 
 interface MultiverseTrack {
@@ -19,7 +23,11 @@ const multiverseTracks: MultiverseTrack[] = [
   {
     id: 'drawn-to-unknown',
     title: "DRAWN TO THE UNKNOWN",
+<<<<<<< HEAD
     artist: "MASON STERLING",
+=======
+    artist: "MASON STERLING", 
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
     style: "Single",
     description: "Le premier single de Mason Sterling - Une exploration sonore de l'inconnu avec des mélodies captivantes",
     cover: "/assets/images/multiverse-audio-logo.png",
@@ -33,13 +41,21 @@ const multiverseTracks: MultiverseTrack[] = [
     id: 'more-than-my-name',
     title: "MORE THAN MY NAME",
     artist: "MASON STERLING",
+<<<<<<< HEAD
     style: "Single (For Samantha)",
+=======
+    style: "Single (For Samantha)", 
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
     description: "Un titre personnel et émotionnel dédié à Samantha - Une ballade touchante sur l'identité et l'amour",
     cover: "/assets/images/multiverse-audio-logo.png",
     audioFile: "/assets/audio/more-than-my-name-for-samantha.wav",
     soundcloudUrl: "",
     isAvailable: true,
+<<<<<<< HEAD
     gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)",
+=======
+    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
     styleIcon: "💝"
   },
   {
@@ -88,6 +104,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
     }
   };
 
+<<<<<<< HEAD
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const time = parseFloat(e.target.value);
     if (audioRef.current) {
@@ -96,6 +113,8 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
     }
   };
 
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
@@ -105,6 +124,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
   return (
     <div className="multiverse-card">
       <div className="track-visual" style={{ background: track.gradient }}>
+<<<<<<< HEAD
         <img 
           src={track.cover} 
           alt={track.title}
@@ -116,6 +136,9 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
           }}
         />
         <div className="track-fallback">
+=======
+        <div className="track-fallback show">
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
           <span className="style-icon">{track.styleIcon}</span>
           <div className="track-title-overlay">{track.title}</div>
         </div>
@@ -144,6 +167,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
             <div className="time-display">
               {formatTime(currentTime)} / {formatTime(duration)}
             </div>
+<<<<<<< HEAD
             <input
               type="range"
               min="0"
@@ -152,6 +176,8 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
               onChange={handleSeek}
               className="seek-bar"
             />
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
           </div>
         </div>
       )}
@@ -174,6 +200,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
                 🎵 LIEN SOUNDCLOUD BIENTÔT
               </button>
             )}
+<<<<<<< HEAD
             {track.audioFile ? (
               <button 
                 className="download-btn"
@@ -187,6 +214,8 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
                 ⬇️ ÉCOUTER PREVIEW
               </button>
             ) : null}
+=======
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
           </>
         ) : (
           <div className="coming-soon-actions">
@@ -216,11 +245,17 @@ const Multiverse = () => {
       <div className="container">
         <div className="section-header">
           <div className="multiverse-logo">
+<<<<<<< HEAD
             <img 
               src="/assets/images/multiverse-audio-logo.png" 
               alt="Multiverse Audio Logo"
               className="logo-image"
             />
+=======
+            <div className="logo-placeholder">
+              🎵 MULTIVERSE AUDIO
+            </div>
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
           </div>
           <div className="section-brand">
             <div className="section-tagline">
@@ -249,7 +284,11 @@ const Multiverse = () => {
               💼 LinkedIn
             </a>
             <a href="https://soundcloud.com/masonsterling" className="social-link soundcloud" target="_blank" rel="noopener noreferrer">
+<<<<<<< HEAD
               🎵 SoundCloud
+=======
+              🎵 SoundCloud  
+>>>>>>> 3b5545b (fix: remove unused React import from Multiverse.tsx to resolve TypeScript build error)
             </a>
             <a href="#" className="social-link spotify" target="_blank" rel="noopener noreferrer">
               🟢 Spotify
