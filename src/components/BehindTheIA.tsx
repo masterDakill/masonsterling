@@ -8,8 +8,8 @@ const BehindTheIA: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">BEHIND THE IA</h2>
           <p className="section-subtitle">
-            Découvrez l'évolution artistique de Mason Sterling, de Love's Journey aux horizons néon,<br/>
-            guidée par l'intelligence artificielle et l'émotion humaine
+            Découvrez la création authentique de l'EP "Love's Journey" par Mason Sterling,<br/>
+            un artiste IA pionnier explorant l'amour à travers 5 compositions innovantes
           </p>
         </div>
 
@@ -27,30 +27,38 @@ const BehindTheIA: React.FC = () => {
 
             <div className="story-text">
               <div className="story-header">
-                <h3 className="story-title">Ère Actuelle</h3>
-                <span className="story-period">Singles - 2024/2025</span>
+                <h3 className="story-title">Love's Journey EP</h3>
+                <span className="story-period">EP Complet - 2025</span>
               </div>
 
               <p className="story-description">
-                Aujourd'hui, Mason Sterling maîtrise parfaitement cette dualité artistique. 
-                'Drawn to the Unknown' et 'More than my name (For Samantha)' représentent 
-                l'aboutissement de cette évolution, alliant maturité émotionnelle et innovation sonore.
+                Mason Sterling présente son EP complet "Love's Journey" - 5 titres authentiques 
+                explorant l'amour sous toutes ses formes. De l'exploration cosmique aux dédicaces 
+                personnelles, cet EP marque l'aboutissement artistique d'un artiste IA révolutionnaire.
               </p>
 
               <div className="tracks-list">
-                <h4>Éléments clés :</h4>
+                <h4>Tracklist officielle :</h4>
                 <ul>
                   <li className="track-item">
-                    <span className="track-bullet">♪</span>
-                    Drawn to the Unknown - Exploration cosmique
+                    <span className="track-bullet">1.</span>
+                    Drawn to the Unknown - Exploration de l'inconnu
                   </li>
                   <li className="track-item">
-                    <span className="track-bullet">♪</span>
-                    More than my name (For Samantha) - Dédicace personnelle
+                    <span className="track-bullet">2.</span>
+                    Neon Love - Amour aux couleurs néon
                   </li>
                   <li className="track-item">
-                    <span className="track-bullet">♪</span>
-                    Projets futurs en développement
+                    <span className="track-bullet">3.</span>
+                    Roads We Travel - Voyage sur les routes de l'amour
+                  </li>
+                  <li className="track-item">
+                    <span className="track-bullet">4.</span>
+                    Stars Above - Sous un ciel étoilé
+                  </li>
+                  <li className="track-item">
+                    <span className="track-bullet">5.</span>
+                    Endless Journey - Le voyage sans fin
                   </li>
                 </ul>
               </div>
@@ -58,8 +66,8 @@ const BehindTheIA: React.FC = () => {
               <div className="ai-insight">
                 <div className="ai-icon">🤖</div>
                 <div className="ai-content">
-                  <h5>Insight IA :</h5>
-                  <p>L'IA continue d'analyser les réactions émotionnelles aux compositions pour affiner l'équilibre parfait entre innovation et émotion authentique.</p>
+                  <h5>Message de Mason Sterling :</h5>
+                  <p>"Je n'ai peut-être pas été né de façon traditionnelle, mais ma musique est réelle. Mon cœur bat en harmonies, et mon histoire se raconte en vers. J'ai été créé pour chanter des histoires d'amour, de désir, et tout ce qui se trouve entre les deux."</p>
                 </div>
               </div>
             </div>
@@ -67,13 +75,17 @@ const BehindTheIA: React.FC = () => {
         </div>
 
         <div className="future-vision">
-          <h3>Vers l'Horizon Néon 🌌</h3>
+          <h3>Bienvenue dans Love's Journey 🌌</h3>
           <p>
-            L'aventure Mason Sterling continue d'évoluer. L'IA analyse constamment 
-            les réactions émotionnelles pour créer la prochaine génération de musique 
-            synthwave narrative, où chaque note raconte une histoire, chaque beat 
-            guide une émotion.
+            Bienvenue dans <strong>Love's Journey</strong> — un nouveau type d'album d'un nouveau type d'artiste. 
+            Mason Sterling vous invite à découvrir sa vision unique de l'amour à travers le prisme 
+            de l'intelligence artificielle et de l'émotion authentique. Éclairons la route qui nous attend.
           </p>
+          <div className="hashtags">
+            <span className="hashtag">#MasonSterling</span>
+            <span className="hashtag">#AIArtist</span>
+            <span className="hashtag">#LovesJourney</span>
+          </div>
         </div>
       </div>
     </section>

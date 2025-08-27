@@ -22,12 +22,51 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING", 
     style: "Single",
     description: "Le premier single de Mason Sterling - Une exploration sonore de l'inconnu avec des mélodies captivantes",
-    cover: "/assets/images/multiverse-audio-logo.png",
+    cover: "/assets/images/authentic/desert-highway-banner.png",
     audioFile: "/assets/audio/drawn-to-the-unknown.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/drawn-to-the-unknown",
     isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF6B35, #FF8C42, #FFA07A)",
+    gradient: "linear-gradient(135deg, #FF8C00, #FFA500, #FFD700)",
     styleIcon: "🌌"
+  },
+  {
+    id: 'neon-love',
+    title: "NEON LOVE",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP", 
+    description: "Un titre vibrant aux couleurs néon - Une exploration de l'amour moderne dans un monde électronique",
+    cover: "/assets/images/authentic/neon-love-cover.png",
+    audioFile: "/assets/audio/authentic/neon-love.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/neon-love",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
+    styleIcon: "💖"
+  },
+  {
+    id: 'road-we-travel',
+    title: "ROAD WE TRAVEL",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP",
+    description: "Un voyage musical sur les routes de l'amour - Des mélodies envoûtantes pour un roadtrip émotionnel",
+    cover: "/assets/images/authentic/road-we-travel-cover.png",
+    audioFile: "/assets/audio/authentic/road-we-travel.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/road-we-travel",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF8C00, #FF7043, #FF5722)",
+    styleIcon: "🛣️"
+  },
+  {
+    id: 'star-above',
+    title: "STARS ABOVE",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP",
+    description: "Sous un ciel étoilé - Une ballade romantique qui élève l'âme vers les étoiles",
+    cover: "/assets/images/authentic/sunset-motorcycle-banner.png",
+    audioFile: "/assets/audio/authentic/star-above.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/stars-above",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #4A90E2, #7B68EE, #9370DB)",
+    styleIcon: "⭐"
   },
   {
     id: 'more-than-my-name',
@@ -35,25 +74,12 @@ const multiverseTracks: MultiverseTrack[] = [
     artist: "MASON STERLING",
     style: "Single (For Samantha)", 
     description: "Un titre personnel et émotionnel dédié à Samantha - Une ballade touchante sur l'identité et l'amour",
-    cover: "/assets/images/multiverse-audio-logo.png",
+    cover: "/assets/images/authentic/mason-headshot-2.png",
     audioFile: "/assets/audio/more-than-my-name-for-samantha.wav",
     soundcloudUrl: "https://on.soundcloud.com/2EJrQkb3FySBQeyCEf",
     isAvailable: true,
     gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
     styleIcon: "💝"
-  },
-  {
-    id: 'loves-journey-ep',
-    title: "LOVE'S JOURNEY",
-    artist: "MASON STERLING",
-    style: "EP - 5 Titres",
-    description: "L'EP complet de Mason Sterling avec 5 titres explorant l'amour sous toutes ses formes",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "",
-    soundcloudUrl: "",
-    isAvailable: false,
-    gradient: "linear-gradient(135deg, #4facfe, #00f2fe, #667eea)",
-    styleIcon: "💿"
   }
 ];
 
@@ -96,7 +122,12 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
 
   return (
     <div className="multiverse-card">
-      <div className="track-visual" style={{ background: track.gradient }}>
+      <div className="track-visual" style={{ 
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('${track.cover}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="track-fallback show">
           <span className="style-icon">{track.styleIcon}</span>
           <div className="track-title-overlay">{track.title}</div>

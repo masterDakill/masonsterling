@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
 import Multiverse from './components/Multiverse'
 import LyricsVisualized from './components/LyricsVisualized'
 import BehindTheIA from './components/BehindTheIA'
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
         <Multiverse />
         <LyricsVisualized />
         <BehindTheIA />

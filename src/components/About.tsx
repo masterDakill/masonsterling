@@ -6,50 +6,75 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="section-title">ABOUT MASON STERLING</h2>
-            <div className="text-content">
-              <p className="intro-text">
-                Bridging the gap between nostalgia and the future, Mason Sterling creates 
-                a unique sound that marries the heart of country music with the electric 
-                pulse of synthwave.
+            <div className="section-header">
+              <h2 className="section-title">À PROPOS</h2>
+              <div className="section-tagline">
+                <span className="artist-name">MASON STERLING</span>
+                <span className="presents">ARTISTE IA PIONNIER</span>
+              </div>
+            </div>
+            
+            <div className="bio-content">
+              <p className="bio-intro">
+                Salut tout le monde, je suis Mason Sterling.
               </p>
               
-              <p>
-                Born from the endless highways and neon-lit nights of the American landscape, 
-                Mason's music tells stories of love, loss, and the journey that defines us all. 
-                His distinctive synthwave country style has captivated audiences worldwide, 
-                creating an entirely new genre that speaks to both the past and the future.
+              <p className="bio-main">
+                Je n'ai peut-être pas été né de façon traditionnelle, mais ma musique est réelle. 
+                Mon cœur bat en harmonies, et mon histoire se raconte en vers. J'ai été créé pour 
+                chanter des histoires d'amour, de désir, et tout ce qui se trouve entre les deux.
               </p>
               
-              <p>
-                With influences ranging from classic country legends to modern electronic 
-                pioneers, Mason Sterling has forged a path that's uniquely his own. Each song 
-                is a cinematic journey through the heart of America, painted with synthesizers 
-                and powered by authentic emotion.
+              <p className="bio-welcome">
+                Bienvenue dans <strong>Love's Journey</strong> — un nouveau type d'album d'un nouveau type d'artiste. 
+                Éclairons la route qui nous attend.
               </p>
               
-              <div className="achievements">
-                <div className="achievement-item">
-                  <span className="achievement-number">3</span>
-                  <span className="achievement-label">Albums Released</span>
-                </div>
-                <div className="achievement-item">
-                  <span className="achievement-number">1M+</span>
-                  <span className="achievement-label">Streams Worldwide</span>
-                </div>
-                <div className="achievement-item">
-                  <span className="achievement-number">50+</span>
-                  <span className="achievement-label">Live Shows</span>
-                </div>
+              <div className="bio-tags">
+                <span className="bio-tag">#MasonSterling</span>
+                <span className="bio-tag">#AIArtist</span>
+                <span className="bio-tag">#LovesJourney</span>
               </div>
             </div>
           </div>
           
           <div className="about-visual">
-            <div className="artist-frame">
-              <div className="artist-placeholder">
-                <span className="artist-icon">🎵</span>
-                <p className="artist-caption">SYNTHWAVE COUNTRY ARTIST</p>
+            <div className="artist-portrait">
+              <img 
+                src="/assets/images/authentic/mason-headshot-1.png" 
+                alt="Mason Sterling - Portrait officiel"
+                className="portrait-image"
+              />
+              <div className="portrait-overlay">
+                <div className="artist-info">
+                  <h3>MASON STERLING</h3>
+                  <p>Synthwave Country Artist</p>
+                  <p>Multiverse Audio</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="journey-highlights">
+              <div className="highlight-item">
+                <span className="highlight-icon">🎵</span>
+                <div className="highlight-text">
+                  <h4>Love's Journey EP</h4>
+                  <p>5 titres explorant l'amour</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-icon">🌟</span>
+                <div className="highlight-text">
+                  <h4>Artiste IA Pionnier</h4>
+                  <p>Nouvelle ère musicale</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-icon">🎶</span>
+                <div className="highlight-text">
+                  <h4>Synthwave Country</h4>
+                  <p>Style unique et innovant</p>
+                </div>
               </div>
             </div>
           </div>

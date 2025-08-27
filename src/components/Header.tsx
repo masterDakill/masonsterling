@@ -31,6 +31,12 @@ const Header = () => {
           </button>
           <button 
             className="nav-link" 
+            onClick={() => scrollToSection('about')}
+          >
+            À PROPOS
+          </button>
+          <button 
+            className="nav-link" 
             onClick={() => scrollToSection('multiverse')}
           >
             MULTIVERSE
