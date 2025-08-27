@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import './Multiverse.css';
+import AudioPlayer from './AudioPlayer';
 
 interface MultiverseTrack {
   id: string;
@@ -85,8 +86,6 @@ const multiverseTracks: MultiverseTrack[] = [
 
 const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
   const [showPlayer, setShowPlayer] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -102,23 +101,7 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
     }
   };
 
-  const handleTimeUpdate = () => {
-    if (audioRef.current) {
-      setCurrentTime(audioRef.current.currentTime);
-    }
-  };
 
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration);
-    }
-  };
-
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  };
 
   return (
     <div className="multiverse-card">
@@ -152,13 +135,14 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
       </div>
 
       {showPlayer && (
-        <div className="audio-player">
-          <div className="player-controls">
-            <div className="time-display">
-              {formatTime(currentTime)} / {formatTime(duration)}
-            </div>
-          </div>
-        </div>
+        <AudioPlayer
+          src={track.audioFile}
+          title={track.title}
+          artist={track.artist}
+          cover={track.cover}
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+        />
       )}
 
       <div className="track-actions">
@@ -193,8 +177,6 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
       <audio
         ref={audioRef}
         src={track.audioFile}
-        onTimeUpdate={handleTimeUpdate}
-        onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setIsPlaying(false)}
         preload="metadata"
       />

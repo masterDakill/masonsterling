@@ -5,9 +5,9 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="about-content">
-          <div className="about-text">
+          <div className="about-text slide-in-left">
             <div className="section-header">
-              <h2 className="section-title">À PROPOS</h2>
+              <h2 className="section-title fade-in">À PROPOS</h2>
               <div className="section-tagline">
                 <span className="artist-name">MASON STERLING</span>
                 <span className="presents">ARTISTE IA PIONNIER</span>
@@ -38,8 +38,8 @@ const About = () => {
             </div>
           </div>
           
-          <div className="about-visual">
-            <div className="artist-portrait">
+          <div className="about-visual slide-in-right">
+            <div className="artist-portrait fade-in">
               <img 
                 src="/assets/images/authentic/mason-headshot-1.png" 
                 alt="Mason Sterling - Portrait officiel"

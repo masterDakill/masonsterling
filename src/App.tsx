@@ -10,12 +10,14 @@ import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import DynamicBackground from './components/DynamicBackground'
+import SmoothScrolling from './components/SmoothScrolling'
 
 function App() {
   return (
     <div className="App">
       <DynamicBackground />
       <ScrollProgress />
+      <SmoothScrolling />
       <Header />
       <main>
         <Hero />
