@@ -1,13 +1,15 @@
 {
-  "name": "vite-react",
+  "name": "mason-sterling-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npx vercel --prod",
+    "deploy-preview": "npx vercel"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -25,6 +27,7 @@
     "pm2": "^6.0.8",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
+    "vercel": "^46.0.5",
     "vite": "^5.4.1"
   },
   "engines": {
