@@ -2,6 +2,9 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
+import MusicPlayer from './components/MusicPlayer'
+import VideoGallery from './components/VideoGallery'
+import MerchStore from './components/MerchStore'
 import Multiverse from './components/Multiverse'
 import LyricsVisualized from './components/LyricsVisualized'
 import BehindTheIA from './components/BehindTheIA'
@@ -22,6 +25,9 @@ function App() {
       <main>
         <Hero />
         <About />
+        <MusicPlayer />
+        <VideoGallery />
+        <MerchStore />
         <Multiverse />
         <LyricsVisualized />
         <BehindTheIA />
