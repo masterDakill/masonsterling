@@ -1,0 +1,32 @@
+{
+  "name": "Mason Sterling - Love's Journey EP",
+  "short_name": "Mason Sterling",
+  "description": "Découvrez l'EP 'Love's Journey' de Mason Sterling, artiste IA pionnier spécialisé en Synthwave Country",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#FF8C00",
+  "orientation": "portrait-primary",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "/assets/images/authentic/mason-headshot-1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/authentic/mason-headshot-1.png",
+      "sizes": "512x512", 
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/hero-banner.jpg",
+      "sizes": "1024x683",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}

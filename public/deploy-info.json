@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "deployDate": "2025-09-10",
+  "features": {
+    "heroSection": "Mason Sterling headshots carousel",
+    "musicPlayer": "Love's Journey EP with 3 tracks",
+    "videoGallery": "2 music videos",
+    "merchStore": "Puzzles and merchandise",
+    "design": "Apple-inspired modern UI with 3D effects"
+  },
+  "components": [
+    "Hero",
+    "About",
+    "MusicPlayer",
+    "VideoGallery", 
+    "MerchStore",
+    "Multiverse",
+    "LyricsVisualized",
+    "BehindTheIA",
+    "LinktreeSection",
+    "Newsletter",
+    "Footer"
+  ],
+  "assets": {
+    "headshots": 7,
+    "audioTracks": 3,
+    "videos": 2,
+    "bookCover": 1
+  }
+}

@@ -1,8 +1,6 @@
-import React, { useState, useRef } from 'react';
-import AnimatedSection from './AnimatedSection';
-import SoundCloudPlayer from './SoundCloudPlayer';
-import SocialShare from './SocialShare';
+import { useState, useRef } from 'react';
 import './Multiverse.css';
+import AudioPlayer from './AudioPlayer';
 
 interface MultiverseTrack {
   id: string;
@@ -22,48 +20,72 @@ const multiverseTracks: MultiverseTrack[] = [
   {
     id: 'drawn-to-unknown',
     title: "DRAWN TO THE UNKNOWN",
-    artist: "MASON STERLING",
+    artist: "MASON STERLING", 
     style: "Single",
     description: "Le premier single de Mason Sterling - Une exploration sonore de l'inconnu avec des mélodies captivantes",
-    cover: "/assets/images/multiverse-audio-logo.png",
+    cover: "/assets/images/authentic/desert-highway-banner.png",
     audioFile: "/assets/audio/drawn-to-the-unknown.wav",
     soundcloudUrl: "https://soundcloud.com/masonsterling/drawn-to-the-unknown",
     isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF6B35, #FF8C42, #FFA07A)",
+    gradient: "linear-gradient(135deg, #FF8C00, #FFA500, #FFD700)",
     styleIcon: "🌌"
+  },
+  {
+    id: 'neon-love',
+    title: "NEON LOVE",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP", 
+    description: "Un titre vibrant aux couleurs néon - Une exploration de l'amour moderne dans un monde électronique",
+    cover: "/assets/images/authentic/neon-love-cover.png",
+    audioFile: "/assets/audio/authentic/neon-love.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/neon-love",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
+    styleIcon: "💖"
+  },
+  {
+    id: 'road-we-travel',
+    title: "ROAD WE TRAVEL",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP",
+    description: "Un voyage musical sur les routes de l'amour - Des mélodies envoûtantes pour un roadtrip émotionnel",
+    cover: "/assets/images/authentic/road-we-travel-cover.png",
+    audioFile: "/assets/audio/authentic/road-we-travel.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/road-we-travel",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #FF8C00, #FF7043, #FF5722)",
+    styleIcon: "🛣️"
+  },
+  {
+    id: 'star-above',
+    title: "STARS ABOVE",
+    artist: "MASON STERLING",
+    style: "Single - Love's Journey EP",
+    description: "Sous un ciel étoilé - Une ballade romantique qui élève l'âme vers les étoiles",
+    cover: "/assets/images/authentic/sunset-motorcycle-banner.png",
+    audioFile: "/assets/audio/authentic/star-above.wav",
+    soundcloudUrl: "https://soundcloud.com/masonsterling/stars-above",
+    isAvailable: true,
+    gradient: "linear-gradient(135deg, #4A90E2, #7B68EE, #9370DB)",
+    styleIcon: "⭐"
   },
   {
     id: 'more-than-my-name',
     title: "MORE THAN MY NAME",
     artist: "MASON STERLING",
-    style: "Single (For Samantha)",
+    style: "Single (For Samantha)", 
     description: "Un titre personnel et émotionnel dédié à Samantha - Une ballade touchante sur l'identité et l'amour",
-    cover: "/assets/images/multiverse-audio-logo.png",
+    cover: "/assets/images/authentic/mason-headshot-2.png",
     audioFile: "/assets/audio/more-than-my-name-for-samantha.wav",
-    soundcloudUrl: "",
+    soundcloudUrl: "https://on.soundcloud.com/2EJrQkb3FySBQeyCEf",
     isAvailable: true,
-    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)",
+    gradient: "linear-gradient(135deg, #FF6B9D, #C44569, #8B2635)", 
     styleIcon: "💝"
-  },
-  {
-    id: 'loves-journey-ep',
-    title: "LOVE'S JOURNEY",
-    artist: "MASON STERLING",
-    style: "EP - 5 Titres",
-    description: "L'EP complet de Mason Sterling avec 5 titres explorant l'amour sous toutes ses formes",
-    cover: "/assets/images/choose-your-mood.png",
-    audioFile: "",
-    soundcloudUrl: "",
-    isAvailable: false,
-    gradient: "linear-gradient(135deg, #4facfe, #00f2fe, #667eea)",
-    styleIcon: "💿"
   }
 ];
 
 const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
   const [showPlayer, setShowPlayer] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -79,47 +101,17 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
     }
   };
 
-  const handleTimeUpdate = () => {
-    if (audioRef.current) {
-      setCurrentTime(audioRef.current.currentTime);
-    }
-  };
 
-  const handleLoadedMetadata = () => {
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration);
-    }
-  };
-
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const time = parseFloat(e.target.value);
-    if (audioRef.current) {
-      audioRef.current.currentTime = time;
-      setCurrentTime(time);
-    }
-  };
-
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  };
 
   return (
-    <AnimatedSection animation="fadeInUp" delay={200} className="track-card-enter">
-      <div className="multiverse-card">
-        <div className="track-visual" style={{ background: track.gradient }}>
-        <img 
-          src={track.cover} 
-          alt={track.title}
-          className="track-artwork"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            target.parentElement?.querySelector('.track-fallback')?.classList.add('show');
-          }}
-        />
-        <div className="track-fallback">
+    <div className="multiverse-card">
+      <div className="track-visual" style={{ 
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('${track.cover}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        <div className="track-fallback show">
           <span className="style-icon">{track.styleIcon}</span>
           <div className="track-title-overlay">{track.title}</div>
         </div>
@@ -143,76 +135,34 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
       </div>
 
       {showPlayer && (
-        <div className="audio-player">
-          <div className="player-controls">
-            <div className="time-display">
-              {formatTime(currentTime)} / {formatTime(duration)}
-            </div>
-            <input
-              type="range"
-              min="0"
-              max={duration}
-              value={currentTime}
-              onChange={handleSeek}
-              className="seek-bar"
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Widget SoundCloud intégré */}
-      {track.isAvailable && track.soundcloudUrl && (
-        <div className="soundcloud-section">
-          <SoundCloudPlayer 
-            url={track.soundcloudUrl}
-            title={track.title}
-            artist={track.artist}
-            minimal={false}
-          />
-        </div>
+        <AudioPlayer
+          src={track.audioFile}
+          title={track.title}
+          artist={track.artist}
+          cover={track.cover}
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+        />
       )}
 
       <div className="track-actions">
         {track.isAvailable ? (
           <>
-            <div className="primary-actions">
-              {track.soundcloudUrl ? (
-                <button 
-                  className="soundcloud-btn enhanced"
-                  onClick={() => window.open(track.soundcloudUrl, '_blank')}
-                >
-                  🎵 ÉCOUTER SUR SOUNDCLOUD
-                </button>
-              ) : (
-                <button 
-                  className="soundcloud-btn disabled"
-                  disabled
-                >
-                  🎵 LIEN SOUNDCLOUD BIENTÔT
-                </button>
-              )}
-              {track.audioFile && (
-                <button 
-                  className="download-btn enhanced"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = track.audioFile;
-                    link.download = `${track.title} - ${track.artist}.wav`;
-                    link.click();
-                  }}
-                >
-                  ⬇️ ÉCOUTER PREVIEW
-                </button>
-              )}
-            </div>
-            <div className="secondary-actions">
-              <SocialShare 
-                title={track.title}
-                url={track.soundcloudUrl || window.location.href}
-                description={track.description}
-                hashtags={['MasonSterling', 'Synthwave', 'MultiverseAudio', 'NewMusic']}
-              />
-            </div>
+            {track.soundcloudUrl ? (
+              <button 
+                className="soundcloud-btn"
+                onClick={() => window.open(track.soundcloudUrl, '_blank')}
+              >
+                🎵 ÉCOUTER SUR SOUNDCLOUD
+              </button>
+            ) : (
+              <button 
+                className="soundcloud-btn disabled"
+                disabled
+              >
+                🎵 LIEN SOUNDCLOUD BIENTÔT
+              </button>
+            )}
           </>
         ) : (
           <div className="coming-soon-actions">
@@ -227,29 +177,22 @@ const MultiverseTrackCard = ({ track }: { track: MultiverseTrack }) => {
       <audio
         ref={audioRef}
         src={track.audioFile}
-        onTimeUpdate={handleTimeUpdate}
-        onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setIsPlaying(false)}
         preload="metadata"
       />
-      </div>
-    </AnimatedSection>
+    </div>
   );
 };
 
 const Multiverse = () => {
   return (
     <section id="multiverse" className="multiverse">
-      <AnimatedSection animation="fadeIn" delay={100}>
-        <div className="container">
-          <AnimatedSection animation="slideInUp" delay={300}>
-            <div className="section-header">
+      <div className="container">
+        <div className="section-header">
           <div className="multiverse-logo">
-            <img 
-              src="/assets/images/multiverse-audio-logo.png" 
-              alt="Multiverse Audio Logo"
-              className="logo-image"
-            />
+            <div className="logo-placeholder">
+              🎵 MULTIVERSE AUDIO
+            </div>
           </div>
           <div className="section-brand">
             <div className="section-tagline">
@@ -262,39 +205,39 @@ const Multiverse = () => {
             Découvrez l'univers musical complet de Mason Sterling.<br/>
             <strong>Des singles touchants à l'EP "Love's Journey" - Une exploration de l'amour et de l'émotion.</strong>
           </p>
-            </div>
-          </AnimatedSection>
+        </div>
         
-          <AnimatedSection animation="fadeInUp" delay={500}>
-            <div className="multiverse-grid">
-            {multiverseTracks.map((track) => (
-              <MultiverseTrackCard key={track.id} track={track} />
-            ))}
-            </div>
-          </AnimatedSection>
+        <div className="multiverse-grid">
+          {multiverseTracks.map((track) => (
+            <MultiverseTrackCard key={track.id} track={track} />
+          ))}
+        </div>
 
-          <AnimatedSection animation="fadeInUp" delay={700}>
-            <div className="media-links">
+        <div className="media-links">
           <h3>MASON STERLING × MULTIVERSE AUDIO</h3>
-          <p className="media-subtitle">Retrouvez l'univers musical complet sur toutes les plateformes</p>
+          <p className="media-subtitle">❤️ Singing about love & healing, one verse at a time! 🎶✨</p>
           <div className="social-links">
-            <a href="#" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
-              💼 LinkedIn
+            <a href="https://youtube.com/playlist?list=PL_2ylY9_71_tyc69170HmzFItt72LoVzs&si=yk7OeAG0oIl33oGO" className="social-link youtube-playlist" target="_blank" rel="noopener noreferrer">
+              🎵 Drawn to the Unknown - Playlist
+            </a>
+            <a href="https://www.youtube.com/@MasonSterling-r3p" className="social-link youtube" target="_blank" rel="noopener noreferrer">
+              📺 YouTube
             </a>
             <a href="https://soundcloud.com/masonsterling" className="social-link soundcloud" target="_blank" rel="noopener noreferrer">
-              🎵 SoundCloud
+              🎵 SoundCloud  
             </a>
-            <a href="#" className="social-link spotify" target="_blank" rel="noopener noreferrer">
-              🟢 Spotify
+            <a href="http://www.tiktok.com/@mason_sterling" className="social-link tiktok" target="_blank" rel="noopener noreferrer">
+              🎬 TikTok
             </a>
-            <a href="#" className="social-link instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/mason683847" className="social-link instagram" target="_blank" rel="noopener noreferrer">
               📸 Instagram
             </a>
+            <a href="https://www.facebook.com/profile.php?id=61578043131723" className="social-link facebook" target="_blank" rel="noopener noreferrer">
+              👥 Facebook
+            </a>
           </div>
-            </div>
-          </AnimatedSection>
         </div>
-      </AnimatedSection>
+      </div>
     </section>
   );
 };

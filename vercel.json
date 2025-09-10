@@ -1,42 +1,5 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "vite build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "installCommand": "npm ci",
-  "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-     {
-      "source": "/LinkTree",
-      "destination": "https://linktr.ee/masonsterling"
-    },
-    {
-      "source": "/instagram",
-      "destination": "https://www.instagram.com/mason683847"
-    },
-    {
-      "source": "/soundcloud", 
-      "destination": "https://soundcloud.com/masonsterling"
-    },
-    {
-      "source": "/youtube",
-      "destination": "https://www.youtube.com/@MasonSterling-r3p"
-    },
-    {
-      "source": "/suno",
-      "destination": "https://suno.com/@masonsterling"
-    }
-  ]
+  "framework": "vite"
 }
-

@@ -1,0 +1,64 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(79,172,254,0.8);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(102,126,234,0.6);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,242,254,0.4);stop-opacity:1" />
+    </linearGradient>
+    <filter id="aiGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- AI Neural Network Pattern -->
+  <g stroke="url(#aiGradient)" fill="url(#aiGradient)" filter="url(#aiGlow)" opacity="0.6">
+    <!-- Neural nodes -->
+    <circle cx="100" cy="100" r="5" />
+    <circle cx="200" cy="120" r="6" />
+    <circle cx="300" cy="80" r="4" />
+    <circle cx="400" cy="140" r="5" />
+    <circle cx="150" cy="200" r="7" />
+    <circle cx="250" cy="180" r="5" />
+    <circle cx="350" cy="220" r="6" />
+    <circle cx="120" cy="300" r="4" />
+    <circle cx="280" cy="320" r="6" />
+    <circle cx="380" cy="290" r="5" />
+    <circle cx="180" cy="380" r="7" />
+    <circle cx="320" cy="400" r="5" />
+    
+    <!-- Connections -->
+    <line x1="100" y1="100" x2="200" y2="120" stroke-width="1" opacity="0.7"/>
+    <line x1="200" y1="120" x2="300" y2="80" stroke-width="1" opacity="0.5"/>
+    <line x1="300" y1="80" x2="400" y2="140" stroke-width="1" opacity="0.6"/>
+    <line x1="100" y1="100" x2="150" y2="200" stroke-width="1" opacity="0.4"/>
+    <line x1="200" y1="120" x2="250" y2="180" stroke-width="1" opacity="0.7"/>
+    <line x1="300" y1="80" x2="350" y2="220" stroke-width="1" opacity="0.5"/>
+    <line x1="150" y1="200" x2="250" y2="180" stroke-width="1" opacity="0.6"/>
+    <line x1="250" y1="180" x2="350" y2="220" stroke-width="1" opacity="0.4"/>
+    <line x1="150" y1="200" x2="120" y2="300" stroke-width="1" opacity="0.5"/>
+    <line x1="250" y1="180" x2="280" y2="320" stroke-width="1" opacity="0.7"/>
+    <line x1="350" y1="220" x2="380" y2="290" stroke-width="1" opacity="0.6"/>
+    <line x1="120" y1="300" x2="180" y2="380" stroke-width="1" opacity="0.4"/>
+    <line x1="280" y1="320" x2="320" y2="400" stroke-width="1" opacity="0.5"/>
+    <line x1="380" y1="290" x2="320" y2="400" stroke-width="1" opacity="0.6"/>
+    
+    <!-- Data streams -->
+    <path d="M50 50 Q150 100 250 50 Q350 0 450 50" stroke-width="2" fill="none" opacity="0.5">
+      <animate attributeName="d" values="M50 50 Q150 100 250 50 Q350 0 450 50;M50 50 Q150 120 250 70 Q350 20 450 70;M50 50 Q150 100 250 50 Q350 0 450 50" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M450 150 Q350 200 250 150 Q150 100 50 150" stroke-width="2" fill="none" opacity="0.4">
+      <animate attributeName="d" values="M450 150 Q350 200 250 150 Q150 100 50 150;M450 150 Q350 220 250 170 Q150 120 50 170;M450 150 Q350 200 250 150 Q150 100 50 150" dur="5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Binary code background -->
+  <g fill="rgba(79,172,254,0.2)" font-family="monospace" font-size="12">
+    <text x="50" y="450">01001101 01100001 01110011 01101111 01101110</text>
+    <text x="80" y="470">01010011 01110100 01100101 01110010 01101100</text>
+    <text x="110" y="490">01101001 01101110 01100111 00100000 01000001 01001001</text>
+  </g>
+</svg>
