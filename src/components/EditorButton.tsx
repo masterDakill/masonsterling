@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import ContentEditor from './ContentEditor'
+import { checkEditorAccess, logoutEditor } from '../config/editor.config'
 import './EditorButton.css'
 
 const EditorButton = () => {
@@ -7,21 +8,15 @@ const EditorButton = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Afficher le bouton éditeur seulement en mode développement ou avec une clé secrète
-    const urlParams = new URLSearchParams(window.location.search)
-    const editMode = urlParams.get('edit') === 'true' || 
-                     localStorage.getItem('edit_mode') === 'true' ||
-                     process.env.NODE_ENV === 'development'
-    
-    setIsVisible(editMode)
+    // Vérifier l'accès à l'éditeur avec le système de sécurité
+    const hasAccess = checkEditorAccess()
+    setIsVisible(hasAccess)
 
-    // Raccourci clavier : Ctrl+Shift+E pour ouvrir l'éditeur
+    // Raccourci clavier : Ctrl+Shift+E SEULEMENT si déjà autorisé
     const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'E') {
+      if (e.ctrlKey && e.shiftKey && e.key === 'E' && hasAccess) {
         e.preventDefault()
-        setIsVisible(true)
         setIsEditorOpen(true)
-        localStorage.setItem('edit_mode', 'true')
       }
       
       // Ctrl+S pour sauvegarder quand l'éditeur est ouvert
@@ -62,6 +57,13 @@ const EditorButton = () => {
         <div className="editor-hint">
           <p>Mode édition activé</p>
           <p className="hint-shortcut">Ctrl+Shift+E pour éditer</p>
+          <button 
+            onClick={logoutEditor}
+            className="logout-btn"
+            title="Se déconnecter de l'éditeur"
+          >
+            🚪 Déconnexion
+          </button>
         </div>
       )}
     </>
