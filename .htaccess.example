@@ -1,0 +1,73 @@
+# Configuration Apache pour site React avec routing
+
+# Activer la réécriture d'URL
+RewriteEngine On
+
+# Redirection HTTPS (décommentez si vous avez SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Support du routing React (SPA)
+# Toutes les routes non-fichiers vont vers index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+
+# Compression Gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Cache des assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images - 1 mois
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  
+  # CSS et JS - 1 semaine
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  
+  # Fonts - 1 mois
+  ExpiresByType font/woff2 "access plus 1 month"
+  ExpiresByType font/woff "access plus 1 month"
+</IfModule>
+
+# Sécurité
+<IfModule mod_headers.c>
+  # Protection XSS
+  Header set X-XSS-Protection "1; mode=block"
+  
+  # Protection clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  # Protection MIME
+  Header set X-Content-Type-Options "nosniff"
+  
+  # CORS pour les fonts (si nécessaire)
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|svg)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# Bloquer l'accès aux fichiers sensibles
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Désactiver la signature du serveur
+ServerSignature Off
+
+# Page d'erreur personnalisée (optionnel)
+# ErrorDocument 404 /index.html
