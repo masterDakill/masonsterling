@@ -75,7 +75,7 @@ Le site se déploie automatiquement ! 🎉
 ### Étape 2 : Configurer le DNS
 Chez votre registrar, ajoutez ces enregistrements :
 
-**Pour un domaine apex (masonsterling.com)** :
+**Pour un domaine apex (masonsterling-ai.com)** :
 ```
 Type: A
 Name: @
@@ -97,7 +97,7 @@ Name: @
 Value: 185.199.111.153
 ```
 
-**Pour un sous-domaine (www.masonsterling.com)** :
+**Pour un sous-domaine (www.masonsterling-ai.com)** :
 ```
 Type: CNAME
 Name: www
@@ -106,11 +106,11 @@ Value: masterdakill.github.io
 
 ### Étape 3 : Ajouter le domaine sur GitHub
 1. Dans **Settings** > **Pages**
-2. Custom domain : `masonsterling.com`
+2. Custom domain : `masonsterling-ai.com`
 3. Cochez **Enforce HTTPS**
 4. Créez un fichier `CNAME` dans `/public` :
 ```
-masonsterling.com
+masonsterling-ai.com
 ```
 
 ## 🔧 Commandes Utiles

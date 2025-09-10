@@ -17,7 +17,7 @@ L'éditeur de contenu est **complètement invisible** aux visiteurs normaux. Il 
 
 Ajoutez votre clé secrète à l'URL:
 ```
-https://votresite.com/?edit=mason2024
+https://masonsterling-ai.com/?edit=mason2024
 ```
 
 **Important:** Remplacez `mason2024` par votre propre clé secrète!
@@ -90,7 +90,7 @@ export const EDITOR_CONFIG = {
 
 1. **Accès privé**
    ```
-   https://masonsterling.com/?edit=votre-cle-secrete
+   https://masonsterling-ai.com/?edit=votre-cle-secrete
    ```
 
 2. **Mode édition activé**
@@ -151,7 +151,7 @@ export const EDITOR_CONFIG = {
 
 4. **Testez avec la nouvelle clé**
    ```
-   https://votresite.com/?edit=nouvelle-cle-super-secrete-2024
+   https://masonsterling-ai.com/?edit=nouvelle-cle-super-secrete-2024
    ```
 
 ## 📊 Monitoring de sécurité

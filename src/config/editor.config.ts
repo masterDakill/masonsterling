@@ -4,18 +4,18 @@
 export const EDITOR_CONFIG = {
   // Mot de passe pour accéder à l'éditeur
   // Changez ceci pour quelque chose de unique et sécurisé
-  SECRET_KEY: 'mason2024',
+  SECRET_KEY: '$Mason241436$',
   
   // Alternative: Utilisez plusieurs clés pour différents utilisateurs
   VALID_KEYS: [
-    'mason2024',      // Votre clé principale
-    'admin2024',      // Clé admin
+    '$Mason241436$',      // Votre clé principale
+    '$Mason241436$',      // Clé admin
     // Ajoutez d'autres clés si nécessaire
   ],
   
   // Emails autorisés (optionnel, pour future authentification)
   AUTHORIZED_EMAILS: [
-    'contact@masonsterling.com',
+    'contact@masonsterling-ai.com',
     // Ajoutez d'autres emails autorisés
   ],
   

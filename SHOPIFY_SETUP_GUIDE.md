@@ -113,7 +113,7 @@ Créez les pages suivantes dans Shopify :
 
 1. Dans **Settings** > **Domains** :
    - Achetez ou connectez votre domaine
-   - Ex: shop.masonsterling.com
+   - Ex: shop.masonsterling-ai.com
 
 ### 10. Analytics et Marketing
 
