@@ -1,35 +1,33 @@
-# Development files
-serve.py
-server.log
-*.log
-.pm2
+# Dependencies
+node_modules/
 
-# Environment files
+# Development files
+src/
+*.ts
+*.tsx
+!dist/**/*
+
+# Config files
+vite.config.ts
+tsconfig.json
+tsconfig.*.json
+eslint.config.js
+
+# Git
+.git/
+.gitignore
+
+# PM2
+ecosystem.config.cjs
+
+# Misc
+.DS_Store
+*.log
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# PM2 ecosystem
-ecosystem.config.cjs
-
-# Git files
-.git/
-.gitignore
-
-# Node modules (handled by Vercel)
-node_modules/
-
-# Build cache
-.vite/
-dist/
+# Keep production files
+!dist/
+!public/
