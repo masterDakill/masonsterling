@@ -1,61 +1,86 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/images/mason-headshot-2.png" />
-    <link rel="apple-touch-icon" href="/assets/images/mason-headshot-2.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#FF8C00" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mason Sterling - Love's Journey EP | Synthwave Country Artist | Multiverse Audio</title>
-    <meta name="description" content="Découvrez Mason Sterling, artiste IA pionnier avec l'EP 'Love's Journey'. 5 titres explorant l'amour : Drawn to the Unknown, Neon Love, Road We Travel, Stars Above, Endless Journey. Synthwave Country authentique." />
-    <meta name="keywords" content="Mason Sterling, Love's Journey, EP, AI Artist, Synthwave Country, Neon Love, Road We Travel, Stars Above, Multiverse Audio, artificial intelligence music, synthwave" />
+    
+    <!-- SEO Principal -->
+    <title>Mason Sterling - Discographie Officielle | Singles "Drawn to the Unknown" & "More than my name"</title>
+    <meta name="description" content="Découvrez la discographie officielle de Mason Sterling : les singles 'Drawn to the Unknown' et 'More than my name (For Samantha)', plus l'EP 'Love's Journey' bientôt disponible. Écoutez directement sur SoundCloud." />
+    <meta name="keywords" content="Mason Sterling, Drawn to the Unknown, More than my name, Love's Journey EP, musique, singles, SoundCloud, artiste français, discographie officielle" />
+    <meta name="author" content="Mason Sterling" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://masonsterling.ai" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mason Sterling - Love's Journey EP | Artiste IA Synthwave Country" />
-    <meta property="og:description" content="Découvrez l'EP 'Love's Journey' de Mason Sterling, artiste IA pionnier. 5 titres authentiques explorant l'amour à travers le synthwave country." />
-    <meta property="og:image" content="/assets/images/authentic/mason-headshot-1.png" />
-    <meta property="og:url" content="https://masonsterling.vercel.app" />
+    <meta property="og:url" content="https://masonsterling.ai" />
+    <meta property="og:title" content="Mason Sterling - Discographie Officielle | Singles & EP" />
+    <meta property="og:description" content="🎵 Découvrez 'Drawn to the Unknown' et 'More than my name (For Samantha)' - Les nouveaux singles de Mason Sterling. EP 'Love's Journey' bientôt disponible !" />
+    <meta property="og:image" content="https://masonsterling.ai/assets/images/multiverse-audio-logo.png" />
     <meta property="og:site_name" content="Mason Sterling Official" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="music:musician" content="Mason Sterling" />
+    <meta property="music:song" content="Drawn to the Unknown" />
+    <meta property="music:song:url" content="https://soundcloud.com/masonsterling/drawn-to-the-unknown" />
     
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mason Sterling - Love's Journey EP | Artiste IA Synthwave Country" />
-    <meta name="twitter:description" content="Découvrez l'EP 'Love's Journey' de Mason Sterling, artiste IA pionnier. 5 titres authentiques explorant l'amour." />
-    <meta name="twitter:image" content="/assets/images/mason-headshot-2.png" />
+    <meta name="twitter:url" content="https://masonsterling.ai" />
+    <meta name="twitter:title" content="Mason Sterling - Discographie Officielle" />
+    <meta name="twitter:description" content="🎵 Nouveaux singles : 'Drawn to the Unknown' & 'More than my name (For Samantha)'" />
+    <meta name="twitter:image" content="https://masonsterling.ai/assets/images/multiverse-audio-logo.png" />
+    <meta name="twitter:creator" content="@masonsterling" />
     
-    <!-- Music Schema -->
+    <!-- Performance & Preloading -->
+    <link rel="preload" href="/assets/images/multiverse-audio-logo.png" as="image" type="image/png" />
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="dns-prefetch" href="//soundcloud.com" />
+    <link rel="preconnect" href="https://soundcloud.com" crossorigin />
+    
+    <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "Mason Sterling",
-      "alternateName": "Mason Sterling x Multiverse Audio",
-      "description": "Artiste IA pionnier spécialisé en Synthwave Country",
-      "genre": ["Synthwave", "Country", "Electronic"],
-      "image": "/assets/images/authentic/mason-headshot-1.png",
-      "url": "https://masonsterling.vercel.app",
+      "url": "https://masonsterling.ai",
       "sameAs": [
-        "https://soundcloud.com/masonsterling",
-        "https://www.youtube.com/@MasonSterling-r3p",
-        "https://www.instagram.com/mason683847",
-        "https://www.tiktok.com/@mason_sterling"
+        "https://soundcloud.com/masonsterling"
       ],
-      "album": {
-        "@type": "MusicAlbum",
-        "name": "Love's Journey",
-        "albumProductionType": "http://schema.org/StudioAlbum",
-        "numberOfTracks": 5,
-        "datePublished": "2025",
-        "track": [
-          {"@type": "MusicRecording", "name": "Drawn to the Unknown", "position": 1},
-          {"@type": "MusicRecording", "name": "Neon Love", "position": 2},
-          {"@type": "MusicRecording", "name": "Road We Travel", "position": 3},
-          {"@type": "MusicRecording", "name": "Stars Above", "position": 4},
-          {"@type": "MusicRecording", "name": "Endless Journey", "position": 5}
-        ]
-      }
+      "genre": ["Synthwave", "Country", "Folk"],
+      "description": "Artiste musical explorant différents univers sonores du folk acoustique au synthwave néon",
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "Love's Journey",
+          "albumReleaseType": "EP",
+          "numTracks": 5,
+          "datePublished": "2024"
+        }
+      ],
+      "track": [
+        {
+          "@type": "MusicRecording",
+          "name": "Drawn to the Unknown",
+          "url": "https://soundcloud.com/masonsterling/drawn-to-the-unknown",
+          "genre": "Synthwave",
+          "inAlbum": {
+            "@type": "MusicAlbum",
+            "name": "Singles Collection"
+          }
+        },
+        {
+          "@type": "MusicRecording", 
+          "name": "More than my name (For Samantha)",
+          "genre": "Folk",
+          "inAlbum": {
+            "@type": "MusicAlbum",
+            "name": "Singles Collection"
+          }
+        }
+      ]
     }
     </script>
   </head>
