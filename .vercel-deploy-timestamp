@@ -1,0 +1,7 @@
+# Deployment timestamp for Mason Sterling Website
+# Last updated: 2025-09-10
+# This file triggers Vercel redeployment
+
+DEPLOY_VERSION=2.0.0
+DEPLOY_DATE=2025-09-10
+FEATURES=apple-inspired-redesign,music-player,video-gallery,merch-store
