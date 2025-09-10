@@ -1,0 +1,164 @@
+/* Editor Button Styles */
+.editor-button {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  animation: bounceIn 0.5s ease;
+}
+
+.editor-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+}
+
+.editor-button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.editor-icon {
+  font-size: 1.25rem;
+  animation: rotate 2s ease-in-out infinite;
+}
+
+.editor-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* Editor Hint */
+.editor-hint {
+  position: fixed;
+  bottom: 5rem;
+  left: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  animation: fadeIn 0.5s ease;
+  z-index: 9989;
+}
+
+.editor-hint p {
+  margin: 0;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.hint-shortcut {
+  color: var(--color-primary) !important;
+  margin-top: 0.25rem !important;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(239, 68, 68, 0.9);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 1);
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .editor-button {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .editor-text {
+    display: none;
+  }
+  
+  .editor-button {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .editor-hint {
+    left: 4.5rem;
+    bottom: 1rem;
+  }
+  
+  .logout-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
