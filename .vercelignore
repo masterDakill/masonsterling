@@ -1,18 +1,6 @@
 # Dependencies
 node_modules/
 
-# Development files
-src/
-*.ts
-*.tsx
-!dist/**/*
-
-# Config files
-vite.config.ts
-tsconfig.json
-tsconfig.*.json
-eslint.config.js
-
 # Git
 .git/
 .gitignore
@@ -28,6 +16,5 @@ ecosystem.config.cjs
 .env.test.local
 .env.production.local
 
-# Keep production files
-!dist/
-!public/
+# Keep everything needed for build
+# DO NOT IGNORE src/ or *.ts or *.tsx files!
