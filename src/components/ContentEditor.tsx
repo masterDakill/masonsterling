@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import contentManager, { ContentData } from '../services/contentManager'
+import githubSync from '../services/githubSync'
 import './ContentEditor.css'
 
 interface ContentEditorProps {
@@ -13,6 +14,8 @@ const ContentEditor = ({ isOpen, onClose }: ContentEditorProps) => {
   const [unsavedChanges, setUnsavedChanges] = useState(false)
   const [showImageUploader, setShowImageUploader] = useState(false)
   const [currentImageField, setCurrentImageField] = useState<string>('')
+  const [githubToken, setGithubToken] = useState(githubSync.getToken())
+  const [isSyncing, setIsSyncing] = useState(false)
 
   useEffect(() => {
     if (isOpen) {
@@ -20,21 +23,36 @@ const ContentEditor = ({ isOpen, onClose }: ContentEditorProps) => {
     }
   }, [isOpen])
 
-  const handleSave = () => {
+  const handleSave = async () => {
     contentManager.saveContent(content)
     setUnsavedChanges(false)
     
-    // Notification de succès
+    // Notification de succès locale
     const notification = document.createElement('div')
     notification.className = 'editor-notification success'
-    notification.textContent = '✓ Changements sauvegardés'
+    notification.textContent = '✓ Changements sauvegardés localement'
     document.body.appendChild(notification)
     setTimeout(() => notification.remove(), 3000)
+    
+    // Sauvegarder sur GitHub si configuré
+    if (githubSync.isConfigured()) {
+      setIsSyncing(true)
+      const success = await githubSync.autoCommitAndPush(content)
+      setIsSyncing(false)
+      
+      if (success) {
+        const githubNotif = document.createElement('div')
+        githubNotif.className = 'editor-notification success'
+        githubNotif.textContent = '☁️ Synchronisé avec GitHub!'
+        document.body.appendChild(githubNotif)
+        setTimeout(() => githubNotif.remove(), 3000)
+      }
+    }
     
     // Recharger la page pour appliquer les changements
     setTimeout(() => {
       window.location.reload()
-    }, 1000)
+    }, 1500)
   }
 
   const handleExport = () => {
@@ -117,10 +135,28 @@ const ContentEditor = ({ isOpen, onClose }: ContentEditorProps) => {
             <button 
               className="btn-save"
               onClick={handleSave}
-              disabled={!unsavedChanges}
+              disabled={!unsavedChanges || isSyncing}
             >
-              💾 Sauvegarder
+              {isSyncing ? '⏳ Sync...' : '💾 Sauvegarder'}
             </button>
+            {!githubSync.isConfigured() && (
+              <button 
+                className="btn-github"
+                onClick={() => {
+                  const token = prompt('Entrez votre token GitHub (ghp_...):')
+                  if (token) {
+                    githubSync.setToken(token)
+                    setGithubToken(token)
+                    alert('✅ Token configuré! Vos modifications seront maintenant synchronisées avec GitHub.')
+                  } else {
+                    githubSync.showSetupGuide()
+                  }
+                }}
+                title="Configurer la synchronisation GitHub"
+              >
+                🔗 GitHub
+              </button>
+            )}
             <button className="btn-export" onClick={handleExport}>
               📥 Exporter
             </button>
