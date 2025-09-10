@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/postbuild.js",
+    "build": "node build-for-vercel.js",
+    "build-old": "vite build && node scripts/postbuild.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npx vercel --prod",
