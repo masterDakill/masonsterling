@@ -1,7 +1,8 @@
 {
   "framework": "vite",
-  "buildCommand": "npm run build",
+  "buildCommand": "./vercel-build.sh",
   "outputDirectory": "dist",
+  "installCommand": "npm ci",
   "rewrites": [
     {
       "source": "/(.*)",
